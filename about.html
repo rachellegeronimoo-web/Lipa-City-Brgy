@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About | Lipa Barangay Services Guide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+
+        /* =========================
+           ABOUT INTRO
+        ========================= */
+
+        .about-intro {
+            background: white;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .about-intro-hero {
+
+            padding: 100px 6% 85px;
+
+            background:
+                linear-gradient(
+                    rgba(20, 27, 24, 0.88),
+                    rgba(20, 27, 24, 0.88)
+                ),
+                url("images/lipa-city.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+
+        .about-page-hero-content {
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+
+        .about-page-hero h1 {
+
+            margin-bottom: 18px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 52px;
+
+            line-height: 1.15;
+
+            color: white;
+        }
+
+
+        .about-page-hero p {
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            color: #f5f5f5;
+        }
+
+
+        /* =========================
+           OUR PURPOSE
+        ========================= */
+
+        .about-purpose {
+
+            padding: 65px 6% 75px;
+
+            background: white;
+        }
+
+
+        .about-purpose-content {
+
+            max-width: 1050px;
+
+            margin: 0 auto;
+        }
+
+
+        .purpose-label {
+
+            margin-bottom: 10px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #6B1E2B;
+        }
+
+
+        .about-purpose h2 {
+
+            margin: 0 0 15px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 38px;
+
+            color: #6B1E2B;
+        }
+
+
+        .about-purpose > .about-purpose-content > p {
+
+            max-width: 800px;
+
+            margin-bottom: 35px;
+
+            color: #555;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           PURPOSE POINTS
+        ========================= */
+
+        .purpose-points {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .purpose-point {
+
+            display: flex;
+
+            gap: 15px;
+
+            padding: 22px;
+
+            background: #f8f6f4;
+
+            border-left: 4px solid #6B1E2B;
+        }
+
+
+        .purpose-point > span {
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #6B1E2B;
+        }
+
+
+        .purpose-point strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-size: 16px;
+
+            color: #6B1E2B;
+        }
+
+
+        .purpose-point p {
+
+            margin: 0;
+
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           THE GUIDE
+        ========================= */
+
+        .guide-section {
+
+            padding: 80px 6%;
+
+            background: #f8f6f4;
+        }
+
+
+        .guide-section-container {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+
+        .guide-section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .guide-section-title h2 {
+
+            margin-bottom: 15px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 36px;
+
+            color: #6B1E2B;
+        }
+
+
+        .guide-section-title p {
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #555;
+
+            line-height: 1.7;
+        }
+
+
+        .guide-cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .guide-card {
+
+            padding: 35px 30px;
+
+            background: white;
+
+            border: 1px solid #e5e5e5;
+
+            transition: 0.2s ease;
+        }
+
+
+        .guide-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .guide-card-number {
+
+            margin-bottom: 20px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #6B1E2B;
+        }
+
+
+        .guide-card h3 {
+
+            margin-bottom: 12px;
+
+            font-size: 21px;
+
+            color: #6B1E2B;
+        }
+
+
+        .guide-card p {
+
+            color: #555;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           HOW IT WORKS
+        ========================= */
+
+        .about-steps {
+
+            padding: 80px 6%;
+
+            background: white;
+        }
+
+
+        .about-steps-container {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+
+        .about-steps-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .about-steps-title h2 {
+
+            margin-bottom: 15px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 36px;
+
+            color: #6B1E2B;
+        }
+
+
+        .about-steps-title p {
+
+            color: #555;
+        }
+
+
+        .steps-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .about-step {
+
+            padding: 25px 15px;
+
+            text-align: center;
+        }
+
+
+        .step-number {
+
+            width: 50px;
+
+            height: 50px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #6B1E2B;
+
+            color: white;
+
+            font-weight: 700;
+        }
+
+
+        .about-step h3 {
+
+            margin-bottom: 10px;
+
+            font-size: 19px;
+
+            color: #6B1E2B;
+        }
+
+
+        .about-step p {
+
+            color: #555;
+
+            line-height: 1.6;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .about-cta {
+
+            padding: 90px 6%;
+
+            background: #6B1E2B;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .about-cta h2 {
+
+            margin-bottom: 15px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 40px;
+
+            color: white;
+        }
+
+
+        .about-cta p {
+
+            max-width: 650px;
+
+            margin: 0 auto 30px;
+
+            color: white;
+
+            line-height: 1.7;
+        }
+
+
+        .about-cta-button {
+
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            background: white;
+
+            color: #6B1E2B;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+
+        .about-cta-button:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .purpose-points {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .guide-cards {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .steps-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .about-intro-hero {
+
+                padding: 75px 6% 65px;
+            }
+
+
+            .about-page-hero h1 {
+
+                font-size: 36px;
+            }
+
+
+            .about-page-hero p {
+
+                font-size: 16px;
+            }
+
+
+            .about-purpose {
+
+                padding: 50px 6% 60px;
+            }
+
+
+            .about-purpose h2 {
+
+                font-size: 31px;
+            }
+
+
+            .guide-section,
+            .about-steps {
+
+                padding: 65px 6%;
+            }
+
+
+            .guide-section-title h2,
+            .about-steps-title h2 {
+
+                font-size: 30px;
+            }
+
+
+            .steps-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-cta {
+
+                padding: 70px 6%;
+            }
+
+
+            .about-cta h2 {
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-symbol">
+                    L
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html"
+                   class="active">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions"
+                 id="accountActions">
+
+                <a href="login.html"
+                   class="login-link">
+
+                    Login
+
+                </a>
+
+                <a href="register.html"
+                   class="header-signup">
+
+                    Sign Up
+
+                </a>
+
+            </div>
+
+
+            <button
+                class="menu-button"
+                id="menuButton">
+
+                ☰
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO + OUR PURPOSE
+    ========================= -->
+
+    <section class="about-intro">
+
+
+        <!-- HERO -->
+
+        <div class="about-intro-hero">
+
+            <div class="about-page-hero-content">
+
+                <h1>
+                    Making barangay services
+                    easier to find.
+                </h1>
+
+                <p>
+                    A simple guide for finding barangay
+                    services, requirements, and helpful
+                    information in Lipa City.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- OUR PURPOSE -->
+
+        <div class="about-purpose">
+
+            <div class="about-purpose-content">
+
+                <div class="purpose-label">
+                    ABOUT THE GUIDE
+                </div>
+
+
+                <h2>
+                    Our Purpose
+                </h2>
+
+
+                <p>
+                    Finding information about barangay
+                    services shouldn't feel complicated.
+                    This guide brings important information
+                    together in one place, making it easier
+                    for residents to know what service they
+                    need, where to go, and what to prepare.
+                </p>
+
+
+                <div class="purpose-points">
+
+
+                    <div class="purpose-point">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Easy to Find
+                            </strong>
+
+                            <p>
+                                Access barangay service
+                                information without searching
+                                through different sources.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="purpose-point">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Clear Information
+                            </strong>
+
+                            <p>
+                                Understand basic requirements,
+                                processes, and service details.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="purpose-point">
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Built for Residents
+                            </strong>
+
+                            <p>
+                                A convenient starting point
+                                for residents looking for
+                                local services.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         THE GUIDE
+    ========================= -->
+
+    <section class="guide-section">
+
+        <div class="guide-section-container">
+
+
+            <div class="guide-section-title">
+
+                <h2>
+                    The Guide
+                </h2>
+
+                <p>
+                    The platform is organized to make finding
+                    barangay information simple and convenient.
+                </p>
+
+            </div>
+
+
+            <div class="guide-cards">
+
+
+                <div class="guide-card">
+
+                    <div class="guide-card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Explore Services
+                    </h3>
+
+                    <p>
+                        Browse different barangay services
+                        and learn about their purpose,
+                        requirements, and basic process.
+                    </p>
+
+                </div>
+
+
+
+                <div class="guide-card">
+
+                    <div class="guide-card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Find Your Barangay
+                    </h3>
+
+                    <p>
+                        Explore the barangays of Lipa City
+                        and access useful information about
+                        each local community.
+                    </p>
+
+                </div>
+
+
+
+                <div class="guide-card">
+
+                    <div class="guide-card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Request a Service
+                    </h3>
+
+                    <p>
+                        Submit a service request through
+                        the platform and keep track of
+                        your submitted requests.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================= -->
+
+    <section class="about-steps">
+
+        <div class="about-steps-container">
+
+
+            <div class="about-steps-title">
+
+                <h2>
+                    How It Works
+                </h2>
+
+                <p>
+                    Getting started with the guide only
+                    takes a few simple steps.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+
+                <div class="about-step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h3>
+                        Browse
+                    </h3>
+
+                    <p>
+                        Explore the available barangay
+                        services and information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h3>
+                        Choose
+                    </h3>
+
+                    <p>
+                        Select the service or barangay
+                        information you need.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <h3>
+                        Request
+                    </h3>
+
+                    <p>
+                        Complete the request form with
+                        the required information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <h3>
+                        Track
+                    </h3>
+
+                    <p>
+                        View your submitted service
+                        requests and their status.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="about-cta">
+
+        <h2>
+            Start exploring the guide.
+        </h2>
+
+        <p>
+            Discover barangay services and useful
+            information for residents of Lipa City.
+        </p>
+
+
+        <a href="services.html"
+           class="about-cta-button">
+
+            Explore Services →
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    L
+                </div>
+
+                <div>
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lipa Barangay Services Guide.
+                Academic Project.
+            </p>
+
+            <p>
+                Platform Technologies
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         FIREBASE AUTH
+    ========================= -->
+
+    <script type="module">
+
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+        const firebaseConfig = {
+
+            apiKey:
+                "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+            authDomain:
+                "lipabarangayservices.firebaseapp.com",
+
+            projectId:
+                "lipabarangayservices",
+
+            storageBucket:
+                "lipabarangayservices.firebasestorage.app",
+
+            messagingSenderId:
+                "995460316863",
+
+            appId:
+                "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+            measurementId:
+                "G-2N9EDEC3ES"
+
+        };
+
+
+        const app =
+            initializeApp(firebaseConfig);
+
+
+        const auth =
+            getAuth(app);
+
+
+        const accountActions =
+            document.getElementById(
+                "accountActions"
+            );
+
+
+        onAuthStateChanged(
+            auth,
+            function(user) {
+
+                if (user) {
+
+                    const displayName =
+                        user.displayName ||
+                        user.email ||
+                        "User";
+
+
+                    accountActions.innerHTML = `
+
+                        <span class="login-link">
+                            Welcome, ${displayName}
+                        </span>
+
+                        <button
+                            type="button"
+                            class="header-signup"
+                            id="logoutButton">
+
+                            Logout
+
+                        </button>
+
+                    `;
+
+
+                    document
+                        .getElementById("logoutButton")
+                        .addEventListener(
+                            "click",
+                            async function() {
+
+                                try {
+
+                                    await signOut(auth);
+
+                                    window.location.href =
+                                        "index.html";
+
+                                } catch (error) {
+
+                                    console.error(
+                                        "Logout error:",
+                                        error
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                } else {
+
+                    accountActions.innerHTML = `
+
+                        <a
+                            href="login.html"
+                            class="login-link">
+
+                            Login
+
+                        </a>
+
+                        <a
+                            href="register.html"
+                            class="header-signup">
+
+                            Sign Up
+
+                        </a>
+
+                    `;
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

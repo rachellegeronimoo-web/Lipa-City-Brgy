@@ -1,0 +1,1725 @@
+/* =========================================================
+   LIPA BARANGAY SERVICES GUIDE
+   MAIN STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f4f0;
+    color: #252020;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root {
+    --maroon: #671d29;
+    --dark-maroon: #42121b;
+    --deep-maroon: #2c0b12;
+
+    --accent-maroon: #7a2634;
+
+    --cream: #f3ebe5;
+    --light-cream: #f8f5f1;
+
+    --white: #ffffff;
+    --black: #211d1e;
+
+    --gray: #77716f;
+    --light-gray: #e5dfdb;
+
+    --light-text: #ddd0d0;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+    height: 82px;
+
+    background: var(--maroon);
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.header-container {
+    width: min(1240px, 90%);
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+}
+
+.brand-symbol {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+.brand-text strong {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.brand-text span {
+    font-size: 10px;
+
+    color: #ddd0d0;
+
+    margin-top: 4px;
+}
+
+
+/* NAVIGATION */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+}
+
+.main-nav a {
+    color: #f5eeee;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    position: relative;
+
+    padding: 30px 0;
+
+    transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: white;
+}
+
+.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 19px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: white;
+}
+
+
+/* HEADER BUTTONS */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.login-link {
+    color: white;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.header-signup {
+    background: white;
+
+    color: var(--maroon);
+
+    padding: 11px 20px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.header-signup:hover {
+    background: #f0e6e6;
+
+    transform: translateY(-1px);
+}
+
+
+/* MOBILE MENU */
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    height: calc(100vh - 82px);
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* HERO BACKGROUND */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("../images/lipa-city.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.02);
+}
+
+
+/* HERO OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(38, 9, 15, 0.94) 0%,
+            rgba(55, 14, 22, 0.80) 40%,
+            rgba(55, 14, 22, 0.36) 75%,
+            rgba(20, 5, 8, 0.18) 100%
+        );
+}
+
+
+/* HERO CONTAINER */
+
+.hero-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1240px, 90%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    max-width: 720px;
+
+    margin-top: 70px;
+
+    padding-bottom: 145px;
+}
+
+
+/* HERO LABEL */
+
+.hero-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color: #d9c7c9;
+}
+
+.label-line {
+    width: 42px;
+
+    height: 1px;
+
+    background: #8b3040;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 6.2vw, 92px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #7a2634;
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero-description {
+    max-width: 560px;
+
+    color: #f0e8e8;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* PRIMARY */
+
+.primary-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: white;
+
+    color: var(--maroon);
+
+    padding: 15px 22px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: #f1e5e6;
+
+    transform: translateY(-2px);
+}
+
+.primary-button span {
+    font-size: 18px;
+}
+
+
+/* OUTLINE */
+
+.outline-button {
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.55);
+
+    padding: 14px 23px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.outline-button:hover {
+    background: rgba(255,255,255,0.1);
+
+    border-color: white;
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.hero-bottom {
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    pointer-events: none;
+}
+
+
+/* FIND A SERVICE */
+
+.hero-info {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    max-width: 280px;
+}
+
+.hero-info-number {
+    font-size: 12px;
+
+    color: #8b3040;
+
+    font-weight: 700;
+}
+
+.hero-info strong {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+
+    color: white;
+}
+
+.hero-info p {
+    font-size: 11px;
+
+    color: #d5c7c8;
+}
+
+
+/* SCROLL */
+
+.hero-scroll {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: #d5c7c8;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+.scroll-line {
+    width: 65px;
+
+    height: 1px;
+
+    background: rgba(255,255,255,0.6);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.quick-search {
+    background: var(--cream);
+
+    padding: 80px 0;
+}
+
+.search-container {
+    width: min(1100px, 88%);
+
+    margin: auto;
+}
+
+.search-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.search-heading > span {
+    color: var(--maroon);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.search-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: var(--dark-maroon);
+
+    margin: 5px 0;
+}
+
+.search-heading p {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+/* SEARCH BOX */
+
+.large-search {
+    display: flex;
+
+    align-items: center;
+
+    background: white;
+
+    border: 1px solid #ddd4cf;
+
+    padding: 7px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 15px 40px rgba(60, 30, 30, 0.08);
+}
+
+.large-search .search-icon {
+    padding-left: 18px;
+
+    font-size: 24px;
+
+    color: var(--maroon);
+}
+
+.large-search input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 16px;
+
+    font-size: 14px;
+
+    color: var(--black);
+}
+
+.large-search button {
+    border: none;
+
+    background: var(--maroon);
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 3px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.large-search button:hover {
+    background: var(--dark-maroon);
+}
+
+
+/* =========================================================
+   FEATURED SERVICES
+========================================================= */
+
+.featured-section {
+    background: var(--light-cream);
+
+    padding: 110px 0;
+}
+
+.section-container {
+    width: min(1240px, 90%);
+
+    margin: auto;
+}
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    display: block;
+
+    color: var(--maroon);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    color: var(--dark-maroon);
+
+    font-size: 48px;
+
+    line-height: 1.05;
+}
+
+.section-heading-right {
+    max-width: 340px;
+}
+
+.section-heading-right p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.text-link {
+    color: var(--maroon);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* SERVICE GRID */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: #dcd4d0;
+
+    border: 1px solid #dcd4d0;
+}
+
+.service-card {
+    position: relative;
+
+    background: white;
+
+    min-height: 330px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.35s;
+}
+
+.service-card:hover {
+    background: var(--maroon);
+
+    color: white;
+
+    transform: translateY(-6px);
+
+    z-index: 2;
+
+    box-shadow:
+        0 15px 35px rgba(50, 10, 15, 0.2);
+}
+
+.card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.service-number {
+    font-size: 11px;
+
+    color: #aaa09d;
+
+    font-weight: 700;
+}
+
+.service-card:hover .service-number {
+    color: #d9c0c3;
+}
+
+.service-icon {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #ddd5d2;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--maroon);
+
+    font-size: 19px;
+}
+
+.service-card:hover .service-icon {
+    border-color: rgba(255,255,255,0.4);
+
+    color: white;
+}
+
+.card-content {
+    margin-top: auto;
+}
+
+.card-content h3 {
+    color: var(--dark-maroon);
+
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.service-card:hover .card-content h3 {
+    color: white;
+}
+
+.card-content p {
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.service-card:hover .card-content p {
+    color: #e3d3d5;
+}
+
+.card-arrow {
+    position: absolute;
+
+    bottom: 27px;
+    right: 30px;
+
+    font-size: 20px;
+
+    color: var(--maroon);
+}
+
+.service-card:hover .card-arrow {
+    color: white;
+}
+
+
+/* =========================================================
+   BARANGAY SECTION
+========================================================= */
+
+.barangay-section {
+    background: var(--maroon);
+
+    color: white;
+
+    padding: 110px 0;
+}
+
+.barangay-container {
+    width: min(1200px, 88%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.barangay-intro .eyebrow {
+    color: #d8bfc2;
+}
+
+.barangay-intro h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.barangay-intro p {
+    max-width: 360px;
+
+    color: #e1ced0;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   AESTHETIC BARANGAY SEARCH
+========================================================= */
+
+.barangay-search {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    margin-top: 28px;
+}
+
+.barangay-search .search-icon {
+    position: absolute;
+
+    left: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 0;
+
+    color: #d8bfc2;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.barangay-search input {
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 20px 0 52px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    box-sizing: border-box;
+}
+
+.barangay-search input::placeholder {
+    color: #d8bfc2;
+}
+
+.barangay-search input:hover {
+    background: rgba(255,255,255,0.12);
+
+    border-color: rgba(255,255,255,0.4);
+}
+
+.barangay-search input:focus {
+    background: white;
+
+    color: var(--black);
+
+    border-color: white;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+}
+
+.barangay-search input:focus::placeholder {
+    color: #999;
+}
+
+.barangay-search:focus-within .search-icon {
+    color: var(--maroon);
+}
+
+
+/* BARANGAY COUNT */
+
+.barangay-count {
+    margin-top: 18px;
+
+    color: #d8bfc2;
+
+    font-size: 11px;
+}
+
+.barangay-count strong {
+    color: white;
+
+    font-size: 15px;
+
+    margin-right: 5px;
+}
+
+
+/* BARANGAY LIST */
+
+.barangay-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid rgba(255,255,255,0.25);
+
+    border-left: 1px solid rgba(255,255,255,0.25);
+}
+
+.barangay-list a {
+    min-height: 75px;
+
+    padding: 0 20px;
+
+    border-right: 1px solid rgba(255,255,255,0.25);
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.barangay-list a span {
+    color: #d2adb2;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    width: 20px;
+}
+
+.barangay-list a b {
+    margin-left: auto;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    opacity: 0.5;
+
+    transition: 0.3s;
+}
+
+.barangay-list a:hover {
+    background: rgba(255,255,255,0.08);
+
+    padding-left: 27px;
+}
+
+.barangay-list a:hover b {
+    opacity: 1;
+
+    transform: translateX(4px);
+}
+
+
+/* VIEW ALL BARANGAYS */
+
+.barangay-view-all {
+    grid-column: 2;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.barangay-view-all .dark-button {
+    background: white;
+
+    color: var(--maroon);
+
+    margin-top: 0;
+}
+
+.barangay-view-all .dark-button:hover {
+    background: #f0e4e5;
+
+    color: var(--dark-maroon);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 620px;
+
+    background: var(--cream);
+}
+
+.about-image {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(50, 12, 18, 0.15),
+            rgba(50, 12, 18, 0.15)
+        ),
+        url("../images/lipa-2nd.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.about-image-overlay {
+    position: absolute;
+
+    left: 50px;
+    bottom: 50px;
+
+    color: white;
+}
+
+.about-image-overlay span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.about-image-overlay h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    line-height: 1.05;
+
+    margin-top: 8px;
+}
+
+.about-content {
+    padding: 90px 12%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.about-content h2 {
+    font-family: "Playfair Display", serif;
+
+    color: var(--dark-maroon);
+
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+.dark-button {
+    align-self: flex-start;
+
+    background: var(--maroon);
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 3px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-top: 15px;
+
+    transition: 0.3s;
+}
+
+.dark-button:hover {
+    background: var(--dark-maroon);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-section {
+    background: var(--dark-maroon);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 110px 20px;
+}
+
+.cta-container {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.cta-section .eyebrow {
+    color: #d5b8bc;
+}
+
+.cta-section h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    color: #d8c8ca;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+
+    background: white;
+
+    color: var(--maroon);
+
+    padding: 15px 25px;
+
+    border-radius: 3px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #eee1e2;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.main-footer {
+    background: #21080d;
+
+    color: white;
+
+    padding: 55px 0 20px;
+}
+
+.footer-container {
+    width: min(1200px, 88%);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Playfair Display", serif;
+}
+
+.footer-brand strong {
+    display: block;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+.footer-brand span {
+    display: block;
+
+    color: #bfaeb0;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #cdbabd;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    width: min(1200px, 88%);
+
+    margin: 20px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #887679;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .barangay-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .barangay-view-all {
+        grid-column: 1;
+
+        justify-content: flex-start;
+    }
+
+    .about-content {
+        padding: 70px 8%;
+    }
+
+    .hero-content {
+        margin-top: 55px;
+
+        padding-bottom: 130px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .main-header {
+        height: 72px;
+    }
+
+    .header-container {
+        width: 92%;
+    }
+
+    .main-nav,
+    .header-actions {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+
+        height: calc(100vh - 72px);
+    }
+
+    .hero-container {
+        width: 88%;
+
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin-top: 35px;
+
+        padding-bottom: 155px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    /* HERO BOTTOM */
+
+    .hero-bottom {
+        bottom: 25px;
+
+        left: 0;
+        right: 0;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .hero-info {
+        max-width: 250px;
+    }
+
+
+    /* SEARCH */
+
+    .search-heading h2 {
+        font-size: 34px;
+    }
+
+    .large-search {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 8px;
+    }
+
+    .large-search .search-icon {
+        display: none;
+    }
+
+    .large-search input {
+        padding: 15px;
+    }
+
+    .large-search button {
+        width: 100%;
+    }
+
+
+    /* BARANGAY SEARCH */
+
+    .barangay-search {
+        max-width: 100%;
+    }
+
+    .barangay-search input {
+        height: 52px;
+    }
+
+
+    /* SECTION HEADING */
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+
+    /* SERVICES */
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* BARANGAYS */
+
+    .barangay-list {
+        grid-template-columns: 1fr;
+    }
+
+    .barangay-view-all {
+        justify-content: flex-start;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        min-height: 420px;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+    }
+
+
+    /* CTA */
+
+    .cta-section h2 {
+        font-size: 45px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .brand-text span {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-content {
+        margin-top: 25px;
+
+        padding-bottom: 175px;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        width: 100%;
+    }
+
+    .primary-button,
+    .outline-button {
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    /* SECTIONS */
+
+    .quick-search,
+    .featured-section,
+    .barangay-section {
+        padding: 75px 0;
+    }
+
+
+    /* HERO BOTTOM */
+
+    .hero-info {
+        gap: 12px;
+    }
+
+    .hero-info p {
+        font-size: 10px;
+    }
+
+
+    /* BARANGAY SEARCH */
+
+    .barangay-search input {
+        height: 50px;
+
+        padding-left: 50px;
+
+        font-size: 12px;
+    }
+
+    .barangay-search .search-icon {
+        left: 17px;
+    }
+}

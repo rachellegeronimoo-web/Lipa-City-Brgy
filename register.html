@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Lipa City Barangay Services Guide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-symbol">
+                L
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    LIPA CITY
+                </strong>
+
+                <span>
+                    Barangay Services Guide
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="index.html#barangays">
+                Barangays
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="login.html" class="login-link">
+                Login
+            </a>
+
+            <a href="register.html" class="header-signup">
+                Sign Up
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     REGISTER PAGE
+================================================== -->
+
+<main class="login-page">
+
+
+    <!-- ==================================================
+         LEFT SIDE
+    ================================================== -->
+
+    <section class="login-intro">
+
+        <div class="login-intro-content">
+
+            <p class="eyebrow">
+                LIPA CITY COMMUNITY PORTAL
+            </p>
+
+
+            <h1>
+                Create<br>
+                Account.
+            </h1>
+
+
+            <p class="login-intro-text">
+
+                Create an account to access
+                the community portal and
+                authenticated services.
+
+            </p>
+
+
+            <div class="login-intro-line"></div>
+
+
+            <div class="login-intro-note">
+
+                <span>
+                    LIPA CITY
+                </span>
+
+                <p>
+                    A simple way to connect
+                    residents with barangay services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         RIGHT SIDE
+    ================================================== -->
+
+    <section class="login-form-section">
+
+        <div class="login-card">
+
+
+            <!-- HEADING -->
+
+            <div class="login-heading">
+
+                <p class="eyebrow">
+                    NEW ACCOUNT
+                </p>
+
+                <h2>
+                    Sign Up
+                </h2>
+
+                <p>
+                    Create your account below.
+                </p>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 REGISTER FORM
+            ================================================== -->
+
+            <form
+                id="registerForm"
+                class="login-form">
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-input">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            minlength="6"
+                            autocomplete="new-password"
+                            required>
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                            aria-label="Show password">
+
+                            Show
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-input">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            minlength="6"
+                            autocomplete="new-password"
+                            required>
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="toggle-password"
+                            aria-label="Show confirm password">
+
+                            Show
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="registerMessage"
+                    class="login-message"
+                    role="alert"
+                    aria-live="polite">
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="registerButton">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+
+            <!-- LOGIN LINK -->
+
+            <div class="register-prompt">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                L
+            </div>
+
+            <div>
+
+                <strong>
+                    LIPA CITY
+                </strong>
+
+                <span>
+                    Barangay Services Guide
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="index.html#barangays">
+                Barangays
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lipa Barangay Services Guide.
+            Academic Project.
+        </p>
+
+        <p>
+            Platform Technologies
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==================================================
+     FIREBASE AUTHENTICATION
+================================================== -->
+
+<script type="module">
+
+    /*
+     * ==================================================
+     * FIREBASE IMPORTS
+     * ==================================================
+     */
+
+    import { initializeApp }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+    import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        updateProfile
+    }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+
+    /*
+     * ==================================================
+     * FIREBASE CONFIGURATION
+     * ==================================================
+     */
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+    authDomain: "lipabarangayservices.firebaseapp.com",
+    projectId: "lipabarangayservices",
+    storageBucket: "lipabarangayservices.firebasestorage.app",
+    messagingSenderId: "995460316863",
+    appId: "1:995460316863:web:ce4ad089a11d55730ad00a",
+    measurementId: "G-2N9EDEC3ES"
+};
+
+
+
+    /*
+     * ==================================================
+     * INITIALIZE FIREBASE
+     * ==================================================
+     */
+
+    const app = initializeApp(firebaseConfig);
+
+    const auth = getAuth(app);
+
+
+
+    /*
+     * ==================================================
+     * GET FORM ELEMENTS
+     * ==================================================
+     */
+
+    const registerForm =
+        document.getElementById("registerForm");
+
+    const nameInput =
+        document.getElementById("name");
+
+    const emailInput =
+        document.getElementById("email");
+
+    const passwordInput =
+        document.getElementById("password");
+
+    const confirmPasswordInput =
+        document.getElementById("confirmPassword");
+
+    const togglePassword =
+        document.getElementById("togglePassword");
+
+    const toggleConfirmPassword =
+        document.getElementById("toggleConfirmPassword");
+
+    const registerMessage =
+        document.getElementById("registerMessage");
+
+    const registerButton =
+        document.getElementById("registerButton");
+
+
+
+    /*
+     * ==================================================
+     * SHOW / HIDE PASSWORD
+     * ==================================================
+     */
+
+    togglePassword.addEventListener(
+        "click",
+        function () {
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+
+                togglePassword.textContent = "Hide";
+
+                togglePassword.setAttribute(
+                    "aria-label",
+                    "Hide password"
+                );
+
+            } else {
+
+                passwordInput.type = "password";
+
+                togglePassword.textContent = "Show";
+
+                togglePassword.setAttribute(
+                    "aria-label",
+                    "Show password"
+                );
+
+            }
+
+        }
+    );
+
+
+
+    /*
+     * ==================================================
+     * SHOW / HIDE CONFIRM PASSWORD
+     * ==================================================
+     */
+
+    toggleConfirmPassword.addEventListener(
+        "click",
+        function () {
+
+            if (
+                confirmPasswordInput.type ===
+                "password"
+            ) {
+
+                confirmPasswordInput.type = "text";
+
+                toggleConfirmPassword.textContent =
+                    "Hide";
+
+                toggleConfirmPassword.setAttribute(
+                    "aria-label",
+                    "Hide confirm password"
+                );
+
+            } else {
+
+                confirmPasswordInput.type = "password";
+
+                toggleConfirmPassword.textContent =
+                    "Show";
+
+                toggleConfirmPassword.setAttribute(
+                    "aria-label",
+                    "Show confirm password"
+                );
+
+            }
+
+        }
+    );
+
+
+
+    /*
+     * ==================================================
+     * REGISTER USER
+     * ==================================================
+     */
+
+    registerForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+
+            /*
+             * GET VALUES
+             */
+
+            const fullName =
+                nameInput.value.trim();
+
+            const email =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value;
+
+            const confirmPassword =
+                confirmPasswordInput.value;
+
+
+
+            /*
+             * CLEAR OLD MESSAGE
+             */
+
+            registerMessage.textContent = "";
+
+            registerMessage.className =
+                "login-message";
+
+
+
+            /*
+             * CHECK FULL NAME
+             */
+
+            if (fullName === "") {
+
+                registerMessage.textContent =
+                    "Please enter your full name.";
+
+                registerMessage.classList.add("error");
+
+                nameInput.focus();
+
+                return;
+
+            }
+
+
+
+            /*
+             * CHECK PASSWORD LENGTH
+             */
+
+            if (password.length < 6) {
+
+                registerMessage.textContent =
+                    "Password must be at least 6 characters.";
+
+                registerMessage.classList.add("error");
+
+                passwordInput.focus();
+
+                return;
+
+            }
+
+
+
+            /*
+             * CHECK PASSWORD MATCH
+             */
+
+            if (password !== confirmPassword) {
+
+                registerMessage.textContent =
+                    "Passwords do not match.";
+
+                registerMessage.classList.add("error");
+
+                confirmPasswordInput.focus();
+
+                return;
+
+            }
+
+
+
+            /*
+             * DISABLE BUTTON
+             */
+
+            registerButton.disabled = true;
+
+            registerButton.textContent =
+                "Creating Account...";
+
+
+
+            /*
+             * CREATE FIREBASE ACCOUNT
+             */
+
+            try {
+
+                const userCredential =
+                    await createUserWithEmailAndPassword(
+                        auth,
+                        email,
+                        password
+                    );
+
+
+                /*
+                 * GET CREATED USER
+                 */
+
+                const user =
+                    userCredential.user;
+
+
+
+                /*
+                 * SAVE FULL NAME
+                 * TO FIREBASE USER PROFILE
+                 */
+
+                await updateProfile(
+                    user,
+                    {
+                        displayName: fullName
+                    }
+                );
+
+
+
+                /*
+                 * SUCCESS
+                 */
+
+                registerMessage.textContent =
+                    "Account created successfully!";
+
+                registerMessage.classList.add("info");
+
+
+
+                /*
+                 * REDIRECT
+                 */
+
+                setTimeout(
+                    function () {
+
+                        window.location.href =
+                            "index.html";
+
+                    },
+                    700
+                );
+
+
+
+            } catch (error) {
+
+                console.error(
+                    "Registration error:",
+                    error
+                );
+
+
+
+                /*
+                 * ENABLE BUTTON AGAIN
+                 */
+
+                registerButton.disabled = false;
+
+                registerButton.textContent =
+                    "Create Account";
+
+
+
+                /*
+                 * FIREBASE ERROR HANDLING
+                 */
+
+                switch (error.code) {
+
+                    case "auth/email-already-in-use":
+
+                        registerMessage.textContent =
+                            "An account with this email already exists.";
+
+                        break;
+
+
+                    case "auth/invalid-email":
+
+                        registerMessage.textContent =
+                            "Please enter a valid email address.";
+
+                        break;
+
+
+                    case "auth/weak-password":
+
+                        registerMessage.textContent =
+                            "Please choose a stronger password.";
+
+                        break;
+
+
+                    case "auth/operation-not-allowed":
+
+                        registerMessage.textContent =
+                            "Email and Password sign-up is not enabled in Firebase.";
+
+                        break;
+
+
+                    case "auth/network-request-failed":
+
+                        registerMessage.textContent =
+                            "Network error. Please check your internet connection.";
+
+                        break;
+
+
+                    default:
+
+                        registerMessage.textContent =
+                            "Unable to create account. Please try again.";
+
+                        break;
+
+                }
+
+
+                registerMessage.classList.add("error");
+
+            }
+
+        }
+    );
+
+</script>
+
+
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
+```

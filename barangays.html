@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Barangays | Lipa Barangay Services Guide</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- ==================================================
+         BARANGAYS PAGE CSS
+    ================================================== -->
+
+    <style>
+
+        /* ==================================================
+           PAGE
+        ================================================== */
+
+        .barangays-page {
+
+            background: var(--light-cream);
+
+            color: var(--black);
+
+        }
+
+
+
+        /* ==================================================
+           HERO
+        ================================================== */
+
+        .barangays-hero {
+
+            background: var(--maroon);
+
+            color: var(--white);
+
+            padding: 115px 0 105px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .barangays-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 430px;
+
+            height: 430px;
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            border-radius: 50%;
+
+            right: -150px;
+
+            top: -210px;
+
+        }
+
+
+        .barangays-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 230px;
+
+            height: 230px;
+
+            border: 1px solid rgba(255,255,255,0.07);
+
+            border-radius: 50%;
+
+            right: 120px;
+
+            bottom: -150px;
+
+        }
+
+
+        .barangays-hero-container {
+
+            width: min(1200px, 88%);
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns: 1.3fr 0.7fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .barangays-hero-content {
+
+            max-width: 700px;
+
+        }
+
+
+        .barangays-eyebrow {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: var(--cream);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .barangays-eyebrow::before {
+
+            content: "";
+
+            width: 32px;
+
+            height: 1px;
+
+            background: var(--cream);
+
+        }
+
+
+        .barangays-hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 6vw, 76px);
+
+            line-height: 1;
+
+            font-weight: 700;
+
+            letter-spacing: -2px;
+
+            margin: 0 0 28px;
+
+        }
+
+
+        .barangays-hero h1 span {
+
+            color: var(--cream);
+
+        }
+
+
+        .barangays-hero-description {
+
+            max-width: 570px;
+
+            color: var(--light-text);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            margin: 0;
+
+        }
+
+
+
+        /* ==================================================
+           HERO NUMBER
+        ================================================== */
+
+        .hero-number {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+        }
+
+
+        .hero-number-inner {
+
+            position: relative;
+
+            text-align: right;
+
+        }
+
+
+        .hero-number strong {
+
+            display: block;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(130px, 17vw, 210px);
+
+            line-height: 0.8;
+
+            color: rgba(255,255,255,0.07);
+
+            font-weight: 700;
+
+            letter-spacing: -12px;
+
+        }
+
+
+        .hero-number-label {
+
+            position: absolute;
+
+            right: 7px;
+
+            bottom: -8px;
+
+            color: var(--white);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+
+
+        /* ==================================================
+           DIRECTORY
+        ================================================== */
+
+        .barangay-directory {
+
+            background: var(--light-cream);
+
+            padding: 105px 0 120px;
+
+        }
+
+
+        .directory-container {
+
+            width: min(1200px, 88%);
+
+            margin: auto;
+
+        }
+
+
+
+        /* ==================================================
+           DIRECTORY TOP
+        ================================================== */
+
+        .directory-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 60px;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .directory-heading {
+
+            max-width: 550px;
+
+        }
+
+
+        .directory-eyebrow {
+
+            display: block;
+
+            color: var(--maroon);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .directory-heading h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 46px;
+
+            line-height: 1.05;
+
+            font-weight: 700;
+
+            margin: 0 0 18px;
+
+            color: var(--black);
+
+        }
+
+
+        .directory-heading p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin: 0;
+
+        }
+
+
+
+        /* ==================================================
+           SEARCH
+        ================================================== */
+
+        .directory-search-wrapper {
+
+            width: 430px;
+
+            max-width: 100%;
+
+        }
+
+
+        .directory-search-label {
+
+            display: block;
+
+            color: var(--black);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .directory-search {
+
+            position: relative;
+
+            width: 100%;
+
+        }
+
+
+        .directory-search-icon {
+
+            position: absolute;
+
+            left: 19px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 19px;
+
+            height: 19px;
+
+            color: var(--gray);
+
+            pointer-events: none;
+
+            z-index: 2;
+
+        }
+
+
+        .directory-search input {
+
+            width: 100%;
+
+            height: 56px;
+
+            padding: 0 50px 0 52px;
+
+            box-sizing: border-box;
+
+            border: 1px solid var(--light-gray);
+
+            border-radius: 30px;
+
+            background: var(--white);
+
+            color: var(--black);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+
+            outline: none;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .directory-search input::placeholder {
+
+            color: var(--gray);
+
+        }
+
+
+        .directory-search input:hover {
+
+            border-color: var(--maroon);
+
+        }
+
+
+        .directory-search input:focus {
+
+            border-color: var(--maroon);
+
+            box-shadow:
+                0 8px 25px rgba(103,29,41,0.10);
+
+        }
+
+
+        .directory-search:focus-within
+        .directory-search-icon {
+
+            color: var(--maroon);
+
+        }
+
+
+        .clear-search {
+
+            position: absolute;
+
+            right: 13px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 31px;
+
+            height: 31px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: transparent;
+
+            color: var(--gray);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .clear-search:hover {
+
+            background: var(--cream);
+
+            color: var(--maroon);
+
+        }
+
+
+
+        /* ==================================================
+           DIRECTORY META
+        ================================================== */
+
+        .directory-meta {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 17px 0;
+
+            border-top: 1px solid var(--light-gray);
+
+            border-bottom: 1px solid var(--light-gray);
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .directory-result {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+        .directory-result strong {
+
+            color: var(--maroon);
+
+            font-size: 14px;
+
+            margin-right: 3px;
+
+        }
+
+
+        .directory-location {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+        }
+
+
+        .location-dot {
+
+            width: 7px;
+
+            height: 7px;
+
+            background: var(--maroon);
+
+            border-radius: 50%;
+
+        }
+
+
+
+        /* ==================================================
+           BARANGAY CARDS
+        ================================================== */
+
+        .barangays-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+
+        }
+
+
+        .barangay-card {
+
+            position: relative;
+
+            min-height: 120px;
+
+            padding: 24px;
+
+            background: var(--white);
+
+            border: 1px solid var(--light-gray);
+
+            text-decoration: none;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            box-sizing: border-box;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .barangay-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 3px;
+
+            height: 0;
+
+            background: var(--maroon);
+
+            transition: height 0.3s ease;
+
+        }
+
+
+        .barangay-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: var(--accent-maroon);
+
+            box-shadow:
+                0 12px 30px rgba(44,11,18,0.08);
+
+        }
+
+
+        .barangay-card:hover::before {
+
+            height: 100%;
+
+        }
+
+
+        .barangay-number {
+
+            color: var(--gray);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .barangay-card-name {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .barangay-card-name h3 {
+
+            margin: 0;
+
+            color: var(--black);
+
+            font-size: 14px;
+
+            line-height: 1.4;
+
+            font-weight: 600;
+
+        }
+
+
+        .barangay-arrow {
+
+            color: var(--maroon);
+
+            font-size: 18px;
+
+            line-height: 1;
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+        .barangay-card:hover
+        .barangay-arrow {
+
+            transform: translateX(4px);
+
+        }
+
+
+
+        /* ==================================================
+           NO RESULTS
+        ================================================== */
+
+        .no-results {
+
+            display: none;
+
+            padding: 70px 20px;
+
+            background: var(--white);
+
+            border: 1px solid var(--light-gray);
+
+            text-align: center;
+
+        }
+
+
+        .no-results-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            margin: 0 auto 18px;
+
+            background: var(--cream);
+
+            color: var(--maroon);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .no-results h3 {
+
+            margin: 0 0 8px;
+
+            color: var(--black);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 24px;
+
+        }
+
+
+        .no-results p {
+
+            margin: 0;
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 900px) {
+
+            .barangays-hero-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+            }
+
+
+            .hero-number {
+
+                justify-content: flex-start;
+
+            }
+
+
+            .hero-number-inner {
+
+                text-align: left;
+
+            }
+
+
+            .hero-number-label {
+
+                left: 7px;
+
+                right: auto;
+
+            }
+
+
+            .directory-top {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 35px;
+
+            }
+
+
+            .directory-search-wrapper {
+
+                width: 100%;
+
+                max-width: 500px;
+
+            }
+
+
+            .barangays-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+
+        @media (max-width: 600px) {
+
+            .barangays-hero {
+
+                padding: 85px 0 75px;
+
+            }
+
+
+            .barangays-hero h1 {
+
+                font-size: 48px;
+
+                letter-spacing: -1px;
+
+            }
+
+
+            .barangays-hero-description {
+
+                font-size: 12px;
+
+            }
+
+
+            .hero-number strong {
+
+                font-size: 120px;
+
+            }
+
+
+            .barangay-directory {
+
+                padding: 75px 0 85px;
+
+            }
+
+
+            .directory-heading h2 {
+
+                font-size: 38px;
+
+            }
+
+
+            .directory-meta {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            .barangays-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .barangay-card {
+
+                min-height: 105px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body class="barangays-page">
+
+
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-symbol">
+                    L
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a
+                    href="barangays.html"
+                    class="active"
+                >
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div
+                class="header-actions"
+                id="accountActions"
+            >
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="register.html"
+                    class="header-signup"
+                >
+                    Sign Up
+                </a>
+
+            </div>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+
+        <!-- ==================================================
+             HERO
+        ================================================== -->
+
+        <section class="barangays-hero">
+
+            <div class="barangays-hero-container">
+
+
+                <div class="barangays-hero-content">
+
+                    <span class="barangays-eyebrow">
+                        EXPLORE LIPA CITY
+                    </span>
+
+
+                    <h1>
+
+                        Your community,
+                        <br>
+
+                        <span>
+                            at a glance.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="barangays-hero-description">
+
+                        Explore the barangays of Lipa City
+                        and quickly find the community you
+                        belong to. Search the directory below
+                        to discover your barangay.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="hero-number">
+
+                    <div class="hero-number-inner">
+
+                        <strong>
+                            72
+                        </strong>
+
+                        <span class="hero-number-label">
+                            BARANGAYS
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             DIRECTORY
+        ================================================== -->
+
+        <section class="barangay-directory">
+
+            <div class="directory-container">
+
+
+                <div class="directory-top">
+
+
+                    <div class="directory-heading">
+
+                        <span class="directory-eyebrow">
+                            BARANGAY DIRECTORY
+                        </span>
+
+
+                        <h2>
+
+                            Explore every
+                            <br>
+                            barangay.
+
+                        </h2>
+
+
+                        <p>
+
+                            Search the complete directory
+                            of barangays in Lipa City.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- SEARCH -->
+
+                    <div class="directory-search-wrapper">
+
+                        <label
+                            for="barangaySearch"
+                            class="directory-search-label"
+                        >
+                            FIND YOUR BARANGAY
+                        </label>
+
+
+                        <div class="directory-search">
+
+
+                            <svg
+                                class="directory-search-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+
+                                <circle
+                                    cx="11"
+                                    cy="11"
+                                    r="7"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                ></circle>
+
+
+                                <path
+                                    d="M16.5 16.5L21 21"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                ></path>
+
+                            </svg>
+
+
+                            <input
+                                type="text"
+                                id="barangaySearch"
+                                placeholder="Search your barangay..."
+                                autocomplete="off"
+                            >
+
+
+                            <button
+                                type="button"
+                                class="clear-search"
+                                id="clearSearch"
+                                aria-label="Clear search"
+                            >
+                                ×
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     DIRECTORY META
+                ================================================== -->
+
+                <div class="directory-meta">
+
+
+                    <div class="directory-result">
+
+                        Showing
+
+                        <strong id="visibleCount">
+                            72
+                        </strong>
+
+                        barangays
+
+                    </div>
+
+
+                    <div class="directory-location">
+
+                        <span class="location-dot"></span>
+
+                        Lipa City, Batangas
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     BARANGAY GRID
+                ================================================== -->
+
+                <div
+                    class="barangays-grid"
+                    id="barangayGrid"
+                >
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     NO RESULTS
+                ================================================== -->
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+
+                    <div class="no-results-icon">
+
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+
+                            <circle
+                                cx="11"
+                                cy="11"
+                                r="7"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            ></circle>
+
+                            <path
+                                d="M16.5 16.5L21 21"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        No barangay found.
+                    </h3>
+
+
+                    <p>
+                        Try searching with a different barangay name.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    L
+                </div>
+
+                <div>
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lipa Barangay Services Guide.
+                Academic Project.
+            </p>
+
+            <p>
+                Platform Technologies
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         FIREBASE AUTHENTICATION
+    ================================================== -->
+
+    <script type="module">
+
+        import {
+            initializeApp
+        }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+        const firebaseConfig = {
+
+            apiKey:
+                "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+            authDomain:
+                "lipabarangayservices.firebaseapp.com",
+
+            projectId:
+                "lipabarangayservices",
+
+            storageBucket:
+                "lipabarangayservices.firebasestorage.app",
+
+            messagingSenderId:
+                "995460316863",
+
+            appId:
+                "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+            measurementId:
+                "G-2N9EDEC3ES"
+
+        };
+
+
+        const app =
+            initializeApp(firebaseConfig);
+
+
+        const auth =
+            getAuth(app);
+
+
+        const accountActions =
+            document.getElementById("accountActions");
+
+
+        onAuthStateChanged(
+            auth,
+            function(user) {
+
+                if (user) {
+
+                    const displayName =
+                        user.displayName ||
+                        user.email;
+
+
+                    accountActions.innerHTML = `
+
+                        <span class="login-link">
+                            Welcome, ${displayName}
+                        </span>
+
+                        <button
+                            type="button"
+                            class="header-signup"
+                            id="logoutButton"
+                        >
+                            Logout
+                        </button>
+
+                    `;
+
+
+                    document
+                        .getElementById("logoutButton")
+                        .addEventListener(
+                            "click",
+                            async function() {
+
+                                try {
+
+                                    await signOut(auth);
+
+                                    window.location.href =
+                                        "index.html";
+
+                                }
+
+                                catch (error) {
+
+                                    console.error(
+                                        "Logout error:",
+                                        error
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                }
+
+                else {
+
+                    accountActions.innerHTML = `
+
+                        <a
+                            href="login.html"
+                            class="login-link"
+                        >
+                            Login
+                        </a>
+
+                        <a
+                            href="register.html"
+                            class="header-signup"
+                        >
+                            Sign Up
+                        </a>
+
+                    `;
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+
+    <!-- ==================================================
+         BARANGAY DATA + SEARCH JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        /*
+        =====================================================
+        BARANGAY DIRECTORY
+
+        Clicking a barangay now opens:
+
+        barangay-profile.html?barangay=NAME
+
+        The profile page will use the barangay name
+        from the URL to display its information.
+        =====================================================
+        */
+
+        const barangays = [
+
+            "Adya",
+            "Anilao",
+            "Anilao-Labac",
+            "Antipolo Del Norte",
+            "Antipolo Del Sur",
+            "Bagong Pook",
+            "San Sebastian",
+            "Balintawak",
+            "Banaybanay",
+            "Bolbok",
+            "Bugtong na Pulo",
+            "Bulacnin",
+            "Bulaklakan",
+            "Calamias",
+            "Cumba",
+            "Dagatan",
+            "Duhatan",
+            "Halang",
+            "Inosloban",
+            "Kayumanggi",
+            "Latag",
+            "Lodlod",
+            "Lumbang",
+            "Mabini",
+            "Malagonlong",
+            "Malitlit",
+            "Marauoy",
+            "Mataas Na Lupa",
+            "Munting Pulo",
+            "Pagolingin Bata",
+            "Pagolingin East",
+            "Pagolingin West",
+            "Pangao",
+            "Pinagkawitan",
+            "Pinagtongulan",
+            "Plaridel",
+            "Poblacion Barangay 1",
+            "Poblacion Barangay 10",
+            "Poblacion Barangay 11",
+            "Poblacion Barangay 2",
+            "Poblacion Barangay 3",
+            "Poblacion Barangay 4",
+            "Poblacion Barangay 5",
+            "Poblacion Barangay 6",
+            "Poblacion Barangay 7",
+            "Poblacion Barangay 8",
+            "Poblacion Barangay 9",
+            "Poblacion Barangay 9-A",
+            "Pusil",
+            "Quezon",
+            "Rizal",
+            "Sabang",
+            "Sampaguita",
+            "San Benito",
+            "San Carlos",
+            "San Celestino",
+            "San Francisco",
+            "San Guillermo",
+            "San Isidro",
+            "San Jose",
+            "San Lucas",
+            "San Salvador",
+            "Sico",
+            "Santo Niño",
+            "Santo Toribio",
+            "Talisay",
+            "Tambo",
+            "Tangob",
+            "Tangway",
+            "Tibig",
+            "Tipacan",
+            "Barangay 12"
+
+        ];
+
+
+
+        /* ==================================================
+           CREATE BARANGAY CARDS
+        ================================================== */
+
+        const barangayGrid =
+            document.getElementById("barangayGrid");
+
+
+        barangays.forEach(
+            function(barangay, index) {
+
+                const card =
+                    document.createElement("a");
+
+
+                card.className =
+                    "barangay-card";
+
+
+                card.href =
+                    "barangay-profile.html?barangay=" +
+                    encodeURIComponent(barangay);
+
+
+                card.setAttribute(
+                    "data-name",
+                    barangay
+                );
+
+
+                const number =
+                    String(index + 1).padStart(2, "0");
+
+
+                card.innerHTML = `
+
+                    <span class="barangay-number">
+                        ${number}
+                    </span>
+
+                    <div class="barangay-card-name">
+
+                        <h3>
+                            ${barangay}
+                        </h3>
+
+                        <span class="barangay-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                `;
+
+
+                barangayGrid.appendChild(card);
+
+            }
+        );
+
+
+
+        /* ==================================================
+           SEARCH ELEMENTS
+        ================================================== */
+
+        const searchInput =
+            document.getElementById(
+                "barangaySearch"
+            );
+
+
+        const clearSearch =
+            document.getElementById(
+                "clearSearch"
+            );
+
+
+        const visibleCount =
+            document.getElementById(
+                "visibleCount"
+            );
+
+
+        const noResults =
+            document.getElementById(
+                "noResults"
+            );
+
+
+
+        /* ==================================================
+           FILTER BARANGAYS
+        ================================================== */
+
+        function filterBarangays() {
+
+            const searchValue =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const cards =
+                document.querySelectorAll(
+                    ".barangay-card"
+                );
+
+
+            let count = 0;
+
+
+            cards.forEach(
+                function(card) {
+
+                    const barangayName =
+                        card
+                            .getAttribute(
+                                "data-name"
+                            )
+                            .toLowerCase();
+
+
+                    if (
+                        barangayName.includes(
+                            searchValue
+                        )
+                    ) {
+
+                        card.style.display =
+                            "flex";
+
+                        count++;
+
+                    }
+
+                    else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+
+            visibleCount.textContent =
+                count;
+
+
+            if (searchValue !== "") {
+
+                clearSearch.style.display =
+                    "flex";
+
+            }
+
+            else {
+
+                clearSearch.style.display =
+                    "none";
+
+            }
+
+
+            if (count === 0) {
+
+                noResults.style.display =
+                    "block";
+
+            }
+
+            else {
+
+                noResults.style.display =
+                    "none";
+
+            }
+
+        }
+
+
+
+        /* ==================================================
+           SEARCH EVENT
+        ================================================== */
+
+        searchInput.addEventListener(
+            "input",
+            filterBarangays
+        );
+
+
+
+        /* ==================================================
+           CLEAR SEARCH
+        ================================================== */
+
+        clearSearch.addEventListener(
+            "click",
+            function() {
+
+                searchInput.value =
+                    "";
+
+                filterBarangays();
+
+                searchInput.focus();
+
+            }
+        );
+
+
+
+        /* ==================================================
+           ESCAPE KEY
+        ================================================== */
+
+        searchInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    searchInput.value =
+                        "";
+
+                    filterBarangays();
+
+                }
+
+            }
+        );
+
+
+
+        /* ==================================================
+           MOBILE MENU
+        ================================================== */
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+
+        const mainNav =
+            document.querySelector(
+                ".main-nav"
+            );
+
+
+        if (menuButton) {
+
+            menuButton.addEventListener(
+                "click",
+                function() {
+
+                    mainNav.classList.toggle(
+                        "show-menu"
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Barangay Profile | Lipa Barangay Services Guide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <style>
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .profile-page {
+            background: var(--light-cream);
+            color: var(--black);
+        }
+
+
+        /* =========================
+           PROFILE HERO
+        ========================= */
+
+        .profile-hero {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 100px 0 90px;
+        }
+
+        .profile-hero-container {
+            width: min(1200px, 88%);
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--light-text);
+            font-size: 12px;
+            text-decoration: none;
+            margin-bottom: 45px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+            transform: translateX(-4px);
+        }
+
+        .profile-eyebrow {
+            color: #d8bfc2;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .profile-hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 76px);
+            line-height: 1;
+            margin: 0 0 20px;
+        }
+
+        .profile-location {
+            color: #e1ced0;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .profile-content {
+            width: min(1200px, 88%);
+            margin: auto;
+            padding: 90px 0 110px;
+        }
+
+
+        /* =========================
+           INTRO GRID
+        ========================= */
+
+        .profile-intro {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 70px;
+            margin-bottom: 85px;
+        }
+
+        .profile-section-label {
+            color: var(--maroon);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .profile-section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            line-height: 1.1;
+            margin: 0 0 22px;
+            color: var(--black);
+        }
+
+        .profile-description {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.9;
+            max-width: 600px;
+        }
+
+
+        /* =========================
+           INFORMATION CARD
+        ========================= */
+
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            padding: 30px;
+        }
+
+        .info-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            margin: 0 0 25px;
+            color: var(--black);
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 13px;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            color: var(--gray);
+        }
+
+        .info-value {
+            color: var(--black);
+            font-weight: 600;
+            text-align: right;
+        }
+
+
+        /* =========================
+           BARANGAY HALL
+        ========================= */
+
+        .hall-section {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            margin-bottom: 90px;
+        }
+
+        .hall-card {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 40px;
+        }
+
+        .hall-card .profile-section-label {
+            color: #d8bfc2;
+        }
+
+        .hall-card h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            margin: 0 0 20px;
+        }
+
+        .hall-card p {
+            color: #e1ced0;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .hall-details {
+            margin-top: 28px;
+        }
+
+        .hall-detail {
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 13px;
+        }
+
+        .hall-detail:last-child {
+            border-bottom: none;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-section {
+            margin-bottom: 80px;
+        }
+
+        .services-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .services-heading p {
+            max-width: 380px;
+            color: var(--gray);
+            font-size: 13px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid var(--light-gray);
+            border-left: 1px solid var(--light-gray);
+        }
+
+        .service-link {
+            min-height: 115px;
+            padding: 25px 28px;
+            background: var(--white);
+            border-right: 1px solid var(--light-gray);
+            border-bottom: 1px solid var(--light-gray);
+            text-decoration: none;
+            color: var(--black);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: 0.3s;
+        }
+
+        .service-link:hover {
+            background: var(--maroon);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .service-link:hover .service-description {
+            color: #e1ced0;
+        }
+
+        .service-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .service-name {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .service-arrow {
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .service-link:hover .service-arrow {
+            transform: translateX(5px);
+        }
+
+        .service-description {
+            color: var(--gray);
+            font-size: 12px;
+            line-height: 1.6;
+            transition: 0.3s;
+        }
+
+
+        /* =========================
+           QUICK ACTIONS
+        ========================= */
+
+        .quick-actions {
+            padding-top: 35px;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .quick-actions-text h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            margin: 0 0 8px;
+        }
+
+        .quick-actions-text p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .quick-actions-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .profile-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 24px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .profile-button.primary {
+            background: var(--maroon);
+            color: var(--white);
+        }
+
+        .profile-button.primary:hover {
+            background: var(--dark-maroon);
+        }
+
+        .profile-button.secondary {
+            background: var(--white);
+            color: var(--maroon);
+            border: 1px solid var(--maroon);
+        }
+
+        .profile-button.secondary:hover {
+            background: var(--maroon);
+            color: var(--white);
+        }
+
+
+        /* =========================
+           ERROR
+        ========================= */
+
+        .profile-error {
+            display: none;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .profile-error h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .profile-error p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .profile-intro,
+            .hall-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .profile-hero {
+                padding: 80px 0 70px;
+            }
+
+            .profile-content {
+                padding: 70px 0 80px;
+            }
+
+            .profile-hero h1 {
+                font-size: 48px;
+            }
+
+            .profile-section-title {
+                font-size: 32px;
+            }
+
+            .info-card,
+            .hall-card {
+                padding: 25px;
+            }
+
+            .service-link {
+                min-height: 100px;
+                padding: 22px;
+            }
+
+            .quick-actions-buttons {
+                width: 100%;
+            }
+
+            .profile-button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="profile-page">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-symbol">
+                L
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    LIPA CITY
+                </strong>
+
+                <span>
+                    Barangay Services Guide
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="barangays.html" class="active">
+                Barangays
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions" id="accountActions">
+
+            <a href="login.html" class="login-link">
+                Login
+            </a>
+
+            <a href="register.html" class="header-signup">
+                Sign Up
+            </a>
+
+        </div>
+
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     PROFILE HERO
+========================= -->
+
+<section class="profile-hero">
+
+    <div class="profile-hero-container">
+
+        <a href="barangays.html"
+           class="back-link">
+
+            ← Back to Barangays
+
+        </a>
+
+
+        <div class="profile-eyebrow">
+            LIPA CITY BARANGAY PROFILE
+        </div>
+
+
+        <h1 id="barangayName">
+            Barangay
+        </h1>
+
+
+        <p class="profile-location">
+            Lipa City, Batangas
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROFILE CONTENT
+========================= -->
+
+<main class="profile-content" id="profileContent">
+
+
+    <!-- ABOUT + INFORMATION -->
+
+    <section class="profile-intro">
+
+
+        <div>
+
+            <div class="profile-section-label">
+                ABOUT THE BARANGAY
+            </div>
+
+            <h2 class="profile-section-title">
+                Get to know your barangay.
+            </h2>
+
+            <p class="profile-description"
+               id="barangayDescription">
+
+                Information about this barangay will appear here.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Barangay Information
+            </h3>
+
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    Barangay
+                </span>
+
+                <span class="info-value"
+                      id="infoBarangay">
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    City
+                </span>
+
+                <span class="info-value">
+                    Lipa City
+                </span>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-label">
+                    Province
+                </span>
+
+                <span class="info-value">
+                    Batangas
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BARANGAY HALL -->
+
+    <section class="hall-section">
+
+
+        <div class="hall-card">
+
+            <div class="profile-section-label">
+                LOCAL GOVERNMENT
+            </div>
+
+            <h2>
+                Barangay Hall
+            </h2>
+
+            <p>
+                Visit your barangay hall for local assistance,
+                community concerns, documents, and other
+                barangay-related services.
+            </p>
+
+
+            <div class="hall-details">
+
+                <div class="hall-detail">
+                    <strong>Office:</strong>
+                    Barangay Hall
+                </div>
+
+                <div class="hall-detail">
+                    <strong>Location:</strong>
+                    <span id="hallLocation">
+                        —
+                    </span>
+                </div>
+
+                <div class="hall-detail">
+                    <strong>City:</strong>
+                    Lipa City, Batangas
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="profile-section-label">
+                COMMUNITY INFORMATION
+            </div>
+
+            <h2 class="profile-section-title">
+                Local information at a glance.
+            </h2>
+
+            <p class="profile-description">
+
+                Use this page to find information about
+                your barangay and access the services
+                available to residents.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AVAILABLE SERVICES -->
+
+    <section class="services-section">
+
+
+        <div class="services-heading">
+
+            <div>
+
+                <div class="profile-section-label">
+                    AVAILABLE SERVICES
+                </div>
+
+                <h2 class="profile-section-title">
+                    What do you need?
+                </h2>
+
+            </div>
+
+
+            <p>
+                Select a service below to continue directly
+                to the request form for this barangay.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid"
+             id="serviceGrid">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="quick-actions">
+
+
+        <div class="quick-actions-text">
+
+            <h3>
+                Need a barangay service?
+            </h3>
+
+            <p>
+                Start a request or return to the barangay directory.
+            </p>
+
+        </div>
+
+
+        <div class="quick-actions-buttons">
+
+            <a href="#"
+               class="profile-button primary"
+               id="requestServiceButton">
+
+                Request a Service
+
+            </a>
+
+
+            <a href="barangays.html"
+               class="profile-button secondary">
+
+                Back to Barangays
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     ERROR MESSAGE
+========================= -->
+
+<section class="profile-error"
+         id="profileError">
+
+    <h2>
+        Barangay Not Found
+    </h2>
+
+    <p>
+        We could not find the barangay you are looking for.
+    </p>
+
+    <a href="barangays.html"
+       class="profile-button primary">
+
+        Back to Barangays
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                L
+            </div>
+
+            <div>
+
+                <strong>
+                    LIPA CITY
+                </strong>
+
+                <span>
+                    Barangay Services Guide
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="barangays.html">
+                Barangays
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lipa Barangay Services Guide.
+            Academic Project.
+        </p>
+
+        <p>
+            Platform Technologies
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     FIREBASE
+========================= -->
+
+<script type="module">
+
+    import {
+        initializeApp
+    } from
+    "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+
+    import {
+        getAuth,
+        onAuthStateChanged,
+        signOut
+    } from
+    "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+    const firebaseConfig = {
+
+        apiKey:
+            "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+        authDomain:
+            "lipabarangayservices.firebaseapp.com",
+
+        projectId:
+            "lipabarangayservices",
+
+        storageBucket:
+            "lipabarangayservices.firebasestorage.app",
+
+        messagingSenderId:
+            "995460316863",
+
+        appId:
+            "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+        measurementId:
+            "G-2N9EDEC3ES"
+
+    };
+
+
+    const app =
+        initializeApp(firebaseConfig);
+
+
+    const auth =
+        getAuth(app);
+
+
+    const accountActions =
+        document.getElementById("accountActions");
+
+
+    onAuthStateChanged(
+        auth,
+        function(user) {
+
+            if (user) {
+
+                const displayName =
+                    user.displayName ||
+                    user.email ||
+                    "User";
+
+
+                accountActions.innerHTML = `
+
+                    <span class="login-link">
+                        Welcome, ${displayName}
+                    </span>
+
+                    <button
+                        class="header-signup"
+                        id="logoutButton">
+
+                        Logout
+
+                    </button>
+
+                `;
+
+
+                document
+                    .getElementById("logoutButton")
+                    .addEventListener(
+                        "click",
+                        function() {
+
+                            signOut(auth)
+                                .then(function() {
+
+                                    window.location.href =
+                                        "barangays.html";
+
+                                });
+
+                        }
+                    );
+
+            }
+
+        }
+    );
+
+</script>
+
+
+
+<!-- =========================
+     PAGE SCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       BARANGAY LIST
+    ========================= */
+
+    const barangays = [
+
+        "Adya",
+        "Anilao",
+        "Anilao-Labac",
+        "Antipolo Del Norte",
+        "Antipolo Del Sur",
+        "Bagong Pook",
+        "San Sebastian",
+        "Balintawak",
+        "Banaybanay",
+        "Bolbok",
+        "Bugtong na Pulo",
+        "Bulacnin",
+        "Bulaklakan",
+        "Calamias",
+        "Cumba",
+        "Dagatan",
+        "Duhatan",
+        "Halang",
+        "Inosloban",
+        "Kayumanggi",
+        "Latag",
+        "Lodlod",
+        "Lumbang",
+        "Mabini",
+        "Malagonlong",
+        "Malitlit",
+        "Marauoy",
+        "Mataas Na Lupa",
+        "Munting Pulo",
+        "Pagolingin Bata",
+        "Pagolingin East",
+        "Pagolingin West",
+        "Pangao",
+        "Pinagkawitan",
+        "Pinagtongulan",
+        "Plaridel",
+        "Poblacion Barangay 1",
+        "Poblacion Barangay 10",
+        "Poblacion Barangay 11",
+        "Poblacion Barangay 2",
+        "Poblacion Barangay 3",
+        "Poblacion Barangay 4",
+        "Poblacion Barangay 5",
+        "Poblacion Barangay 6",
+        "Poblacion Barangay 7",
+        "Poblacion Barangay 8",
+        "Poblacion Barangay 9",
+        "Poblacion Barangay 9-A",
+        "Pusil",
+        "Quezon",
+        "Rizal",
+        "Sabang",
+        "Sampaguita",
+        "San Benito",
+        "San Carlos",
+        "San Celestino",
+        "San Francisco",
+        "San Guillermo",
+        "San Isidro",
+        "San Jose",
+        "San Lucas",
+        "San Salvador",
+        "Sico",
+        "Santo Niño",
+        "Santo Toribio",
+        "Talisay",
+        "Tambo",
+        "Tangob",
+        "Tangway",
+        "Tibig",
+        "Tipacan",
+        "Barangay 12"
+
+    ];
+
+
+
+    /* =========================
+       URL
+    ========================= */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const barangay =
+        params.get("barangay");
+
+
+    const barangayName =
+        barangay
+            ? decodeURIComponent(barangay)
+            : "";
+
+
+    const encodedBarangay =
+        encodeURIComponent(barangayName);
+
+
+
+    /* =========================
+       DESCRIPTION
+    ========================= */
+
+    const barangayDescriptions = {
+
+        "Adya":
+            "Adya is one of the barangays of Lipa City, Batangas. Residents can use this guide to find local information and access barangay services.",
+
+        "Anilao":
+            "Anilao is a barangay in Lipa City where residents can access local community services and barangay assistance.",
+
+        "Anilao-Labac":
+            "Anilao-Labac is a barangay in Lipa City. This page provides a convenient guide to local information and services.",
+
+        "Antipolo Del Norte":
+            "Antipolo Del Norte is one of Lipa City's barangays. Residents can use this guide to explore available barangay services.",
+
+        "Antipolo Del Sur":
+            "Antipolo Del Sur is a barangay in Lipa City. Find local information and services through this community guide.",
+
+        "Bagong Pook":
+            "Bagong Pook is a barangay in Lipa City. Residents can use this guide to discover local services and community information.",
+
+        "San Sebastian":
+            "San Sebastian is one of the barangays of Lipa City. This guide helps residents find local information and barangay services.",
+
+        "Balintawak":
+            "Balintawak is a barangay in Lipa City where residents can access local information and community services.",
+
+        "Banaybanay":
+            "Banaybanay is a barangay in Lipa City. Use this guide to explore local information and available services.",
+
+        "Bolbok":
+            "Bolbok is one of the barangays of Lipa City. Residents can find local information and barangay services through this guide.",
+
+        "Bugtong na Pulo":
+            "Bugtong na Pulo is a barangay in Lipa City. This guide provides residents with convenient access to local service information.",
+
+        "Bulacnin":
+            "Bulacnin is a barangay in Lipa City. Residents can explore community information and available barangay services here.",
+
+        "Bulaklakan":
+            "Bulaklakan is one of Lipa City's barangays. This guide helps residents find local information and services.",
+
+        "Calamias":
+            "Calamias is a barangay in Lipa City. Residents can use this page to discover local services and community information.",
+
+        "Cumba":
+            "Cumba is a barangay in Lipa City. Find information about local services and barangay assistance through this guide.",
+
+        "Dagatan":
+            "Dagatan is one of the barangays of Lipa City. Residents can use this guide to access local information and services.",
+
+        "Duhatan":
+            "Duhatan is a barangay in Lipa City. This guide makes it easier for residents to find barangay-related information.",
+
+        "Halang":
+            "Halang is one of Lipa City's barangays. Residents can explore available services and local community information here.",
+
+        "Inosloban":
+            "Inosloban is a barangay in Lipa City. Use this guide to find local information and available barangay services.",
+
+        "Kayumanggi":
+            "Kayumanggi is a barangay in Lipa City. Residents can access community information and barangay services through this guide.",
+
+        "Latag":
+            "Latag is one of the barangays of Lipa City. This guide provides convenient access to local service information.",
+
+        "Lodlod":
+            "Lodlod is a barangay in Lipa City. Residents can use this guide to discover local information and barangay services.",
+
+        "Lumbang":
+            "Lumbang is one of Lipa City's barangays. Explore local community information and available services through this guide.",
+
+        "Mabini":
+            "Mabini is a barangay in Lipa City. Residents can use this guide to find local information and access available barangay services.",
+
+        "Malagonlong":
+            "Malagonlong is a barangay in Lipa City. This guide helps residents discover local information and community services.",
+
+        "Malitlit":
+            "Malitlit is one of the barangays of Lipa City. Residents can explore local services and barangay information here.",
+
+        "Marauoy":
+            "Marauoy is a barangay in Lipa City. Use this guide to find community information and available barangay services.",
+
+        "Mataas Na Lupa":
+            "Mataas Na Lupa is one of Lipa City's barangays. Residents can use this guide to access local information and services.",
+
+        "Munting Pulo":
+            "Munting Pulo is a barangay in Lipa City. This guide provides residents with information about local services.",
+
+        "Pagolingin Bata":
+            "Pagolingin Bata is a barangay in Lipa City. Residents can explore local community information and available services.",
+
+        "Pagolingin East":
+            "Pagolingin East is one of Lipa City's barangays. Find local information and barangay services through this guide.",
+
+        "Pagolingin West":
+            "Pagolingin West is a barangay in Lipa City. Residents can use this guide to discover available community services.",
+
+        "Pangao":
+            "Pangao is one of the barangays of Lipa City. This guide helps residents find local information and barangay services.",
+
+        "Pinagkawitan":
+            "Pinagkawitan is a barangay in Lipa City. Residents can access local information and community services through this guide.",
+
+        "Pinagtongulan":
+            "Pinagtongulan is one of Lipa City's barangays. Use this guide to find local information and available services.",
+
+        "Plaridel":
+            "Plaridel is a barangay in Lipa City. Residents can explore barangay information and available local services here.",
+
+        "Poblacion Barangay 1":
+            "Poblacion Barangay 1 is part of Lipa City's central barangays. Residents can use this guide to find local services.",
+
+        "Poblacion Barangay 10":
+            "Poblacion Barangay 10 is part of Lipa City's central barangays. Find local information and services through this guide.",
+
+        "Poblacion Barangay 11":
+            "Poblacion Barangay 11 is part of Lipa City's central barangays. Residents can access local service information here.",
+
+        "Poblacion Barangay 2":
+            "Poblacion Barangay 2 is one of Lipa City's central barangays. This guide provides access to local services and information.",
+
+        "Poblacion Barangay 3":
+            "Poblacion Barangay 3 is part of Lipa City's central barangays. Residents can explore available barangay services here.",
+
+        "Poblacion Barangay 4":
+            "Poblacion Barangay 4 is one of Lipa City's central barangays. Use this guide to find local information and services.",
+
+        "Poblacion Barangay 5":
+            "Poblacion Barangay 5 is part of Lipa City's central barangays. Residents can access local community information here.",
+
+        "Poblacion Barangay 6":
+            "Poblacion Barangay 6 is one of Lipa City's central barangays. Find local information and barangay services through this guide.",
+
+        "Poblacion Barangay 7":
+            "Poblacion Barangay 7 is part of Lipa City's central barangays. Residents can explore available local services here.",
+
+        "Poblacion Barangay 8":
+            "Poblacion Barangay 8 is one of Lipa City's central barangays. This guide helps residents find local information and services.",
+
+        "Poblacion Barangay 9":
+            "Poblacion Barangay 9 is part of Lipa City's central barangays. Residents can use this guide to access barangay services.",
+
+        "Poblacion Barangay 9-A":
+            "Poblacion Barangay 9-A is part of Lipa City's central barangays. Find local information and available services here.",
+
+        "Pusil":
+            "Pusil is a barangay in Lipa City. Residents can use this guide to discover local information and community services.",
+
+        "Quezon":
+            "Quezon is one of Lipa City's barangays. This guide provides residents with access to local information and services.",
+
+        "Rizal":
+            "Rizal is a barangay in Lipa City. Residents can explore local community information and available barangay services.",
+
+        "Sabang":
+            "Sabang is one of the barangays of Lipa City. Use this guide to find local information and barangay services.",
+
+        "Sampaguita":
+            "Sampaguita is a barangay in Lipa City. Residents can access local community information and available services through this guide.",
+
+        "San Benito":
+            "San Benito is one of Lipa City's barangays. This guide helps residents find local information and community services.",
+
+        "San Carlos":
+            "San Carlos is a barangay in Lipa City. Residents can explore available barangay services and local information.",
+
+        "San Celestino":
+            "San Celestino is one of the barangays of Lipa City. Residents can use this guide to find local services.",
+
+        "San Francisco":
+            "San Francisco is a barangay in Lipa City. This guide provides convenient access to local information and barangay services.",
+
+        "San Guillermo":
+            "San Guillermo is one of Lipa City's barangays. Residents can explore local community information and services.",
+
+        "San Isidro":
+            "San Isidro is a barangay in Lipa City. Residents can use this guide to find local information and available barangay services.",
+
+        "San Jose":
+            "San Jose is one of the barangays of Lipa City. This guide helps residents access local information and services.",
+
+        "San Lucas":
+            "San Lucas is a barangay in Lipa City. Residents can explore community information and available barangay services here.",
+
+        "San Salvador":
+            "San Salvador is one of Lipa City's barangays. Use this guide to find local information and community services.",
+
+        "Sico":
+            "Sico is a barangay in Lipa City. Residents can use this guide to discover local information and available services.",
+
+        "Santo Niño":
+            "Santo Niño is one of Lipa City's barangays. This guide provides residents with access to local service information.",
+
+        "Santo Toribio":
+            "Santo Toribio is a barangay in Lipa City. Residents can explore available barangay services and community information.",
+
+        "Talisay":
+            "Talisay is one of the barangays of Lipa City. Use this guide to find local information and available services.",
+
+        "Tambo":
+            "Tambo is a barangay in Lipa City. Residents can access local information and barangay services through this guide.",
+
+        "Tangob":
+            "Tangob is one of Lipa City's barangays. This guide helps residents find local information and available services.",
+
+        "Tangway":
+            "Tangway is a barangay in Lipa City. Residents can use this guide to discover local community information and services.",
+
+        "Tibig":
+            "Tibig is one of the barangays of Lipa City. Residents can explore available local services and barangay information.",
+
+        "Tipacan":
+            "Tipacan is a barangay in Lipa City. This guide provides residents with convenient access to local information and services.",
+
+        "Barangay 12":
+            "Barangay 12 is one of the barangays of Lipa City. Residents can use this guide to find local information and services."
+
+    };
+
+
+
+    /* =========================
+       VALIDATE BARANGAY
+    ========================= */
+
+    const profileContent =
+        document.getElementById(
+            "profileContent"
+        );
+
+
+    const profileError =
+        document.getElementById(
+            "profileError"
+        );
+
+
+    if (
+        !barangayName ||
+        !barangays.includes(barangayName)
+    ) {
+
+        profileContent.style.display =
+            "none";
+
+        profileError.style.display =
+            "block";
+
+    } else {
+
+
+        /* =========================
+           BASIC INFORMATION
+        ========================= */
+
+        document.getElementById(
+            "barangayName"
+        ).textContent =
+            barangayName;
+
+
+        document.getElementById(
+            "infoBarangay"
+        ).textContent =
+            barangayName;
+
+
+        document.getElementById(
+            "hallLocation"
+        ).textContent =
+            barangayName + ", Lipa City";
+
+
+        document.getElementById(
+            "barangayDescription"
+        ).textContent =
+            barangayDescriptions[barangayName] ||
+            "This page provides information about " +
+            barangayName +
+            " and the barangay services available to residents.";
+
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        const services = [
+
+            {
+                name: "Barangay Clearance",
+                description:
+                    "Request a barangay clearance for documents, applications, and other official purposes."
+            },
+
+            {
+                name: "Barangay Certificate",
+                description:
+                    "Request a barangay certificate for local identification and other community-related purposes."
+            },
+
+            {
+                name: "Health Services",
+                description:
+                    "Access information about available barangay health services and assistance."
+            },
+
+            {
+                name: "Social Assistance",
+                description:
+                    "Find available social assistance and community support services."
+            }
+
+        ];
+
+
+        const serviceGrid =
+            document.getElementById(
+                "serviceGrid"
+            );
+
+
+        services.forEach(
+            function(service) {
+
+                const link =
+                    document.createElement("a");
+
+
+                link.className =
+                    "service-link";
+
+
+                /*
+                    DIRECT REQUEST FLOW
+
+                    Barangay Profile
+                    → Service
+                    → Request Service
+                */
+
+                link.href =
+                    "request-service.html?service=" +
+                    encodeURIComponent(
+                        service.name
+                    ) +
+                    "&barangay=" +
+                    encodedBarangay;
+
+
+                link.innerHTML = `
+
+                    <div class="service-top">
+
+                        <span class="service-name">
+                            ${service.name}
+                        </span>
+
+                        <span class="service-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <div class="service-description">
+                        ${service.description}
+                    </div>
+
+                `;
+
+
+                serviceGrid.appendChild(link);
+
+            }
+        );
+
+
+
+        /* =========================
+           REQUEST BUTTON
+        ========================= */
+
+        const requestServiceButton =
+            document.getElementById(
+                "requestServiceButton"
+            );
+
+
+        requestServiceButton.href =
+            "request-service.html?service=Barangay%20Services&barangay=" +
+            encodedBarangay;
+
+    }
+
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuButton =
+        document.getElementById(
+            "menuButton"
+        );
+
+
+    const mainNav =
+        document.querySelector(
+            ".main-nav"
+        );
+
+
+    if (menuButton) {
+
+        menuButton.addEventListener(
+            "click",
+            function() {
+
+                mainNav.classList.toggle(
+                    "show-menu"
+                );
+
+            }
+        );
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lipa Barangay Services Guide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* ==================================================
+           FEATURED SERVICE CARD IMAGES
+        ================================================== */
+
+        .service-card {
+            overflow: hidden;
+        }
+
+        .service-card-image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-symbol">
+                    L
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="active">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="header-actions" id="accountActions">
+
+                <a href="login.html" class="login-link">
+                    Login
+                </a>
+
+                <a href="register.html" class="header-signup">
+                    Sign Up
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <!-- BACKGROUND -->
+
+            <div class="hero-background"></div>
+
+            <!-- OVERLAY -->
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-container">
+
+
+                <div class="hero-content">
+
+
+                    <!-- LABEL -->
+
+                    <div class="hero-label">
+
+                        <span class="label-line"></span>
+
+                        <span>
+                            LIPA CITY COMMUNITY PORTAL
+                        </span>
+
+                    </div>
+
+
+                    <!-- TITLE -->
+
+                    <h1>
+
+                        A Guide to
+                        <span>
+                            Barangay Services.
+                        </span>
+
+                    </h1>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p class="hero-description">
+
+                        Find essential barangay services,
+                        requirements, locations, and contact
+                        information across Lipa City — all in
+                        one convenient place.
+
+                    </p>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="services.html"
+                            class="primary-button"
+                        >
+
+                            Explore Services
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="about.html"
+                            class="outline-button"
+                        >
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HERO BOTTOM -->
+
+                <div class="hero-bottom">
+
+
+                    <div class="hero-info">
+
+                        <span class="hero-info-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Find a Service
+                            </strong>
+
+                            <p>
+                                Search services available
+                                in your barangay.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-scroll">
+
+                        <span>
+                            SCROLL TO EXPLORE
+                        </span>
+
+                        <div class="scroll-line"></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             QUICK SEARCH
+        ================================================== -->
+
+        <section class="quick-search">
+
+
+            <div class="search-container">
+
+
+                <div class="search-heading">
+
+                    <span>
+                        COMMUNITY SERVICES
+                    </span>
+
+                    <h2>
+                        What are you looking for?
+                    </h2>
+
+                    <p>
+                        Search for a service or browse by category.
+                    </p>
+
+                </div>
+
+
+                <div class="large-search">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+
+                    <input
+                        type="text"
+                        id="homeSearch"
+                        placeholder="Search for a barangay service..."
+                    >
+
+
+                    <button onclick="searchService()">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             FEATURED SERVICES
+        ================================================== -->
+
+        <section class="featured-section">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ESSENTIAL SERVICES
+                        </span>
+
+
+                        <h2>
+
+                            Services residents
+                            <br>
+                            can easily find.
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="section-heading-right">
+
+                        <p>
+
+                            Access important information about
+                            common barangay services and
+                            community assistance.
+
+                        </p>
+
+
+                        <a
+                            href="services.html"
+                            class="text-link"
+                        >
+
+                            View All Services →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SERVICE CARDS -->
+
+                <div class="service-grid">
+
+
+                    <!-- CARD 1 -->
+
+                    <a
+                        href="services.html"
+                        class="service-card"
+                    >
+
+                        <!-- CARD IMAGE -->
+
+                        <div class="service-card-image">
+
+                            <img
+                                src="images/lipa-clearance.png"
+                                alt="Barangay Clearance"
+                            >
+
+                        </div>
+
+
+                        <div class="card-top">
+
+                            <div class="service-number">
+                                01
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <h3>
+                                Barangay Clearance
+                            </h3>
+
+                            <p>
+
+                                Requirements and information
+                                for requesting a barangay
+                                clearance.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-arrow">
+                            →
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- CARD 2 -->
+
+                    <a
+                        href="services.html"
+                        class="service-card"
+                    >
+
+                        <!-- CARD IMAGE -->
+
+                        <div class="service-card-image">
+
+                            <img
+                                src="images/lipa-certificate.png"
+                                alt="Barangay Certificate"
+                            >
+
+                        </div>
+
+
+                        <div class="card-top">
+
+                            <div class="service-number">
+                                02
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <h3>
+                                Barangay Certificate
+                            </h3>
+
+                            <p>
+
+                                Request barangay certification for residency, indigency, and other official purposes.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-arrow">
+                            →
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- CARD 3 -->
+
+                    <a
+                        href="services.html"
+                        class="service-card"
+                    >
+
+                        <!-- CARD IMAGE -->
+
+                        <div class="service-card-image">
+
+                            <img
+                                src="images/lipa-health.png"
+                                alt="Barangay Health Center"
+                            >
+
+                        </div>
+
+
+                        <div class="card-top">
+
+                            <div class="service-number">
+                                03
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <h3>
+                                Barangay Health Center
+                            </h3>
+
+                            <p>
+
+                                Basic health services and community health assistance available to residents.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-arrow">
+                            →
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- CARD 4 -->
+
+                    <a
+                        href="services.html"
+                        class="service-card"
+                    >
+
+                        <!-- CARD IMAGE -->
+
+                        <div class="service-card-image">
+
+                            <img
+                                src="images/lipa-social.png"
+                                alt="Social Assistance"
+                            >
+
+                        </div>
+
+
+                        <div class="card-top">
+
+                            <div class="service-number">
+                                04
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <h3>
+                                Social Assistance
+                            </h3>
+
+                            <p>
+
+                                Explore community support
+                                and social assistance services.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-arrow">
+                            →
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             BARANGAY DIRECTORY
+        ================================================== -->
+
+        <section
+            class="barangay-section"
+            id="barangays"
+        >
+
+
+            <div class="barangay-container">
+
+
+                <!-- INTRO -->
+
+                <div class="barangay-intro">
+
+
+                    <span class="eyebrow">
+                        EXPLORE LIPA
+                    </span>
+
+
+                    <h2>
+
+                        Find your
+                        <br>
+                        barangay.
+
+                    </h2>
+
+
+                    <p>
+
+                        Quickly find your barangay and explore
+                        the services available in your area.
+
+                    </p>
+
+
+                    <!-- AESTHETIC BARANGAY SEARCH -->
+
+                    <div class="barangay-search">
+
+                        <span class="search-icon">
+
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+
+                                <circle
+                                    cx="11"
+                                    cy="11"
+                                    r="7"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                ></circle>
+
+                                <path
+                                    d="M16.5 16.5L21 21"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                ></path>
+
+                            </svg>
+
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="barangaySearch"
+                            placeholder="Search your barangay..."
+                            onkeyup="filterBarangays()"
+                        >
+
+                    </div>
+
+
+                    <div class="barangay-count">
+
+                        <strong id="barangayCount">
+                            12
+                        </strong>
+
+                        featured barangays
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FEATURED BARANGAYS -->
+
+                <div
+                    class="barangay-list"
+                    id="barangayList"
+                >
+
+
+                    <a href="services.html?barangay=Adya">
+
+                        <span>
+                            01
+                        </span>
+
+                        Adya
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Anilao">
+
+                        <span>
+                            02
+                        </span>
+
+                        Anilao
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Balintawak">
+
+                        <span>
+                            03
+                        </span>
+
+                        Balintawak
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Banaybanay">
+
+                        <span>
+                            04
+                        </span>
+
+                        Banaybanay
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Bolbok">
+
+                        <span>
+                            05
+                        </span>
+
+                        Bolbok
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Dagatan">
+
+                        <span>
+                            06
+                        </span>
+
+                        Dagatan
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Inosloban">
+
+                        <span>
+                            07
+                        </span>
+
+                        Inosloban
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Mabini">
+
+                        <span>
+                            08
+                        </span>
+
+                        Mabini
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Marauoy">
+
+                        <span>
+                            09
+                        </span>
+
+                        Marauoy
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Pinagkawitan">
+
+                        <span>
+                            10
+                        </span>
+
+                        Pinagkawitan
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Sabang">
+
+                        <span>
+                            11
+                        </span>
+
+                        Sabang
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a href="services.html?barangay=Tambo">
+
+                        <span>
+                            12
+                        </span>
+
+                        Tambo
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- VIEW ALL -->
+
+                <div class="barangay-view-all">
+
+                    <a
+                        href="barangays.html"
+                        class="dark-button"
+                    >
+
+                        View All 72 Barangays →
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+
+            <div class="about-image">
+
+
+                <div class="about-image-overlay">
+
+                    <span>
+                        LIPA CITY
+                    </span>
+
+
+                    <h2>
+
+                        Built for the
+                        community.
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-content">
+
+
+                <span class="eyebrow">
+                    OUR PURPOSE
+                </span>
+
+
+                <h2>
+
+                    Making local services
+                    easier to discover.
+
+                </h2>
+
+
+                <p>
+
+                    The Lipa Barangay Services Guide is a
+                    community-focused web application designed
+                    to make barangay service information easier
+                    to access.
+
+                </p>
+
+
+                <p>
+
+                    Instead of searching through different
+                    sources, residents can browse services,
+                    requirements, locations, and contact
+                    information in one organized platform.
+
+                </p>
+
+
+                <a
+                    href="services.html"
+                    class="dark-button"
+                >
+
+                    Explore the Guide →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CTA
+        ================================================== -->
+
+        <section class="cta-section">
+
+
+            <div class="cta-container">
+
+
+                <span class="eyebrow">
+                    LIPA CITY COMMUNITY
+                </span>
+
+
+                <h2>
+
+                    Information when
+                    <br>
+                    you need it.
+
+                </h2>
+
+
+                <p>
+
+                    Start exploring barangay services
+                    available in Lipa City.
+
+                </p>
+
+
+                <a
+                    href="services.html"
+                    class="cta-button"
+                >
+
+                    Browse Services →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="main-footer">
+
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+
+                <div class="footer-logo">
+                    L
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 Lipa Barangay Services Guide.
+                Academic Project.
+
+            </p>
+
+
+            <p>
+                Platform Technologies
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         FIREBASE AUTHENTICATION
+    ================================================== -->
+
+    <script type="module">
+
+        /*
+         * ==================================================
+         * FIREBASE IMPORTS
+         * ==================================================
+         */
+
+        import { initializeApp }
+            from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        }
+            from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+        /*
+         * ==================================================
+         * FIREBASE CONFIGURATION
+         * ==================================================
+         */
+
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+            authDomain: "lipabarangayservices.firebaseapp.com",
+
+            projectId: "lipabarangayservices",
+
+            storageBucket: "lipabarangayservices.firebasestorage.app",
+
+            messagingSenderId: "995460316863",
+
+            appId: "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+            measurementId: "G-2N9EDEC3ES"
+
+        };
+
+
+        /*
+         * ==================================================
+         * INITIALIZE FIREBASE
+         * ==================================================
+         */
+
+        const app =
+            initializeApp(firebaseConfig);
+
+        const auth =
+            getAuth(app);
+
+
+        /*
+         * ==================================================
+         * ACCOUNT HEADER
+         * ==================================================
+         */
+
+        const accountActions =
+            document.getElementById("accountActions");
+
+
+        /*
+         * ==================================================
+         * CHECK LOGIN STATUS
+         * ==================================================
+         */
+
+        onAuthStateChanged(auth, function(user) {
+
+            if (user) {
+
+                /*
+                 * USER IS LOGGED IN
+                 */
+
+                const displayName =
+                    user.displayName || "User";
+
+
+                accountActions.innerHTML = `
+
+                    <span class="login-link">
+                        Welcome, ${displayName}
+                    </span>
+
+                    <button
+                        type="button"
+                        class="header-signup"
+                        id="logoutButton">
+
+                        Logout
+
+                    </button>
+
+                `;
+
+
+                /*
+                 * LOGOUT
+                 */
+
+                document
+                    .getElementById("logoutButton")
+                    .addEventListener("click", async function() {
+
+                        try {
+
+                            await signOut(auth);
+
+                            window.location.href =
+                                "index.html";
+
+                        } catch (error) {
+
+                            console.error(
+                                "Logout error:",
+                                error
+                            );
+
+                        }
+
+                    });
+
+
+            } else {
+
+                /*
+                 * USER IS NOT LOGGED IN
+                 */
+
+                accountActions.innerHTML = `
+
+                    <a
+                        href="login.html"
+                        class="login-link">
+
+                        Login
+
+                    </a>
+
+                    <a
+                        href="register.html"
+                        class="header-signup">
+
+                        Sign Up
+
+                    </a>
+
+                `;
+
+            }
+
+        });
+
+    </script>
+
+
+
+    <!-- ==================================================
+         PAGE JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        /* ==================================================
+           BARANGAY SEARCH
+        ================================================== */
+
+        function filterBarangays() {
+
+            const input =
+                document.getElementById("barangaySearch");
+
+            const filter =
+                input.value.toLowerCase();
+
+            const list =
+                document.getElementById("barangayList");
+
+            const barangays =
+                list.getElementsByTagName("a");
+
+            let visibleCount = 0;
+
+
+            for (let i = 0; i < barangays.length; i++) {
+
+                const name =
+                    barangays[i].textContent.toLowerCase();
+
+
+                if (name.includes(filter)) {
+
+                    barangays[i].style.display = "flex";
+
+                    visibleCount++;
+
+                } else {
+
+                    barangays[i].style.display = "none";
+
+                }
+
+            }
+
+
+            document.getElementById("barangayCount").textContent =
+                visibleCount;
+
+        }
+
+
+
+        /* ==================================================
+           HOME SERVICE SEARCH
+        ================================================== */
+
+        function searchService() {
+
+            const search =
+                document.getElementById("homeSearch").value.trim();
+
+
+            if (search === "") {
+
+                window.location.href = "services.html";
+
+                return;
+
+            }
+
+
+            window.location.href =
+                "services.html?search=" +
+                encodeURIComponent(search);
+
+        }
+
+
+
+        /* ==================================================
+           ENTER KEY FOR HOME SEARCH
+        ================================================== */
+
+        document
+            .getElementById("homeSearch")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+
+                    searchService();
+
+                }
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Lipa Barangay Services Guide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        /* =========================
+           ADMIN PAGE
+        ========================= */
+
+        .admin-page {
+            background: var(--light-cream);
+            color: var(--black);
+            min-height: 100vh;
+        }
+
+
+        .admin-hero {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 85px 0 75px;
+        }
+
+
+        .admin-container {
+            width: min(1200px, 88%);
+            margin: auto;
+        }
+
+
+        .admin-eyebrow {
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #d8bfc2;
+        }
+
+
+        .admin-hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 52px;
+            line-height: 1.05;
+            margin: 0 0 15px;
+        }
+
+
+        .admin-hero p {
+            max-width: 600px;
+            color: #e1ced0;
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* =========================
+           DASHBOARD
+        ========================= */
+
+        .admin-dashboard {
+            width: min(1200px, 88%);
+            margin: 0 auto;
+            padding: 70px 0 100px;
+        }
+
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+
+        .stat-card {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            padding: 25px;
+        }
+
+
+        .stat-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--gray);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+
+        .stat-number {
+            font-family: "Playfair Display", serif;
+            color: var(--maroon);
+            font-size: 34px;
+            line-height: 1;
+        }
+
+
+        /* =========================
+           TOOLBAR
+        ========================= */
+
+        .admin-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+
+        .toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+        }
+
+
+        .admin-search {
+            height: 46px;
+            width: 280px;
+            border: 1px solid var(--light-gray);
+            background: var(--white);
+            padding: 0 16px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            outline: none;
+            color: var(--black);
+        }
+
+
+        .admin-search:focus {
+            border-color: var(--maroon);
+        }
+
+
+        .status-filter {
+            height: 46px;
+            border: 1px solid var(--light-gray);
+            background: var(--white);
+            padding: 0 15px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            color: var(--black);
+            outline: none;
+        }
+
+
+        .clear-button {
+            height: 46px;
+            padding: 0 18px;
+            border: 1px solid var(--maroon);
+            background: var(--maroon);
+            color: var(--white);
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+
+        .clear-button:hover {
+            background: var(--dark-maroon);
+        }
+
+
+        /* =========================
+           TABLE
+        ========================= */
+
+        .requests-table-wrapper {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            overflow-x: auto;
+        }
+
+
+        .requests-table {
+            width: 100%;
+            min-width: 1000px;
+            border-collapse: collapse;
+        }
+
+
+        .requests-table th {
+            background: var(--maroon);
+            color: var(--white);
+            text-align: left;
+            padding: 15px 16px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+
+        .requests-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 12px;
+            color: var(--black);
+            vertical-align: middle;
+        }
+
+
+        .requests-table tbody tr:hover {
+            background: var(--light-cream);
+        }
+
+
+        .requests-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+
+        .request-id {
+            font-weight: 700;
+            color: var(--maroon);
+        }
+
+
+        .resident-name {
+            font-weight: 600;
+        }
+
+
+        .service-name {
+            color: var(--gray);
+        }
+
+
+        /* =========================
+           STATUS
+        ========================= */
+
+        .status-select {
+            height: 36px;
+            border: 1px solid var(--light-gray);
+            background: var(--white);
+            padding: 0 10px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            color: var(--black);
+            outline: none;
+            cursor: pointer;
+        }
+
+
+        .status-select:focus {
+            border-color: var(--maroon);
+        }
+
+
+        /* =========================
+           VIEW BUTTON
+        ========================= */
+
+        .view-button {
+            height: 36px;
+            padding: 0 12px;
+            border: 1px solid var(--maroon);
+            background: var(--white);
+            color: var(--maroon);
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+
+        .view-button:hover {
+            background: var(--maroon);
+            color: var(--white);
+        }
+
+
+        /* =========================
+           EMPTY STATE
+        ========================= */
+
+        .empty-state {
+            display: none;
+            text-align: center;
+            padding: 70px 20px;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+        }
+
+
+        .empty-state h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            margin: 0 0 10px;
+            color: var(--black);
+        }
+
+
+        .empty-state p {
+            color: var(--gray);
+            font-size: 12px;
+            margin: 0;
+        }
+
+
+        /* =========================
+           REQUEST DETAILS MODAL
+        ========================= */
+
+        .request-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(33, 29, 30, 0.55);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 9999;
+        }
+
+
+        .request-modal.show {
+            display: flex;
+        }
+
+
+        .request-modal-content {
+            width: min(650px, 100%);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            padding: 35px;
+            position: relative;
+        }
+
+
+        .request-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+
+        .request-modal-header h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--black);
+            font-size: 30px;
+            margin: 5px 0 0;
+        }
+
+
+        .request-modal-close {
+            border: none;
+            background: transparent;
+            color: var(--gray);
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0;
+        }
+
+
+        .request-modal-close:hover {
+            color: var(--maroon);
+        }
+
+
+        .request-details {
+            display: grid;
+            grid-template-columns:
+                1fr 1fr;
+            gap: 0 25px;
+        }
+
+
+        .request-detail {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+
+        .request-detail.full {
+            grid-column: 1 / -1;
+        }
+
+
+        .request-detail-label {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+
+
+        .request-detail-value {
+            color: var(--black);
+            font-size: 13px;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .stats-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .admin-toolbar {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+
+            .toolbar-left {
+                width: 100%;
+            }
+
+
+            .admin-search {
+                flex: 1;
+                width: auto;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .admin-hero {
+                padding: 65px 0 60px;
+            }
+
+
+            .admin-hero h1 {
+                font-size: 40px;
+            }
+
+
+            .admin-dashboard {
+                padding: 50px 0 70px;
+            }
+
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .toolbar-left {
+                flex-direction: column;
+            }
+
+
+            .admin-search,
+            .status-filter {
+                width: 100%;
+            }
+
+
+            .clear-button {
+                width: 100%;
+            }
+
+
+            .request-modal-content {
+                padding: 25px;
+            }
+
+
+            .request-modal-header h3 {
+                font-size: 26px;
+            }
+
+
+            .request-details {
+                grid-template-columns: 1fr;
+            }
+
+
+            .request-detail.full {
+                grid-column: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="admin-page">
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html"
+               class="brand">
+
+                <div class="brand-symbol">
+                    L
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions"
+                 id="accountActions">
+
+                <a href="login.html"
+                   class="login-link">
+
+                    Login
+
+                </a>
+
+                <a href="register.html"
+                   class="header-signup">
+
+                    Sign Up
+
+                </a>
+
+            </div>
+
+
+            <button class="menu-button"
+                    id="menuButton">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ADMIN HERO
+    ========================= -->
+
+    <section class="admin-hero">
+
+        <div class="admin-container">
+
+            <div class="admin-eyebrow">
+                LIPA CITY ADMINISTRATION
+            </div>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Manage and monitor resident service
+                requests submitted through the
+                Lipa City Barangay Services Guide.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================= -->
+
+    <main class="admin-dashboard">
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Total Requests
+                </div>
+
+                <div class="stat-number"
+                     id="totalRequests">
+
+                    0
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Pending
+                </div>
+
+                <div class="stat-number"
+                     id="pendingRequests">
+
+                    0
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Approved
+                </div>
+
+                <div class="stat-number"
+                     id="approvedRequests">
+
+                    0
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Rejected
+                </div>
+
+                <div class="stat-number"
+                     id="rejectedRequests">
+
+                    0
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOOLBAR -->
+
+        <div class="admin-toolbar">
+
+            <div class="toolbar-left">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="admin-search"
+                    placeholder="Search requests...">
+
+
+                <select
+                    id="statusFilter"
+                    class="status-filter">
+
+                    <option value="All">
+                        All Status
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Approved">
+                        Approved
+                    </option>
+
+                    <option value="Rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="clear-button"
+                id="clearAllButton">
+
+                Clear All Requests
+
+            </button>
+
+        </div>
+
+
+        <!-- TABLE -->
+
+        <div class="requests-table-wrapper">
+
+            <table class="requests-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Request ID
+                        </th>
+
+                        <th>
+                            Resident
+                        </th>
+
+                        <th>
+                            Barangay
+                        </th>
+
+                        <th>
+                            Service
+                        </th>
+
+                        <th>
+                            Date Submitted
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Update
+                        </th>
+
+                        <th>
+                            View
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div class="empty-state"
+             id="emptyState">
+
+            <h3>
+                No Service Requests
+            </h3>
+
+            <p>
+                There are currently no service
+                requests to display.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         REQUEST DETAILS MODAL
+    ========================= -->
+
+    <div class="request-modal"
+         id="requestModal">
+
+        <div class="request-modal-content">
+
+            <div class="request-modal-header">
+
+                <div>
+
+                    <div class="admin-eyebrow">
+                        SERVICE REQUEST
+                    </div>
+
+                    <h3>
+                        Request Details
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="request-modal-close"
+                    id="closeRequestModal"
+                    type="button">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+
+            <div class="request-details"
+                 id="requestDetails">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    L
+                </div>
+
+                <div>
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lipa Barangay Services Guide.
+                Academic Project.
+            </p>
+
+            <p>
+                Platform Technologies
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         FIREBASE
+    ========================= -->
+
+    <script type="module">
+
+        import {
+            initializeApp
+        }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+        import {
+            getFirestore,
+            collection,
+            getDocs,
+            doc,
+            updateDoc,
+            deleteDoc
+        }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
+
+        /* =========================
+           FIREBASE CONFIG
+        ========================= */
+
+        const firebaseConfig = {
+
+            apiKey:
+                "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+            authDomain:
+                "lipabarangayservices.firebaseapp.com",
+
+            projectId:
+                "lipabarangayservices",
+
+            storageBucket:
+                "lipabarangayservices.firebasestorage.app",
+
+            messagingSenderId:
+                "995460316863",
+
+            appId:
+                "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+            measurementId:
+                "G-2N9EDEC3ES"
+
+        };
+
+
+        const app =
+            initializeApp(
+                firebaseConfig
+            );
+
+
+        const auth =
+            getAuth(app);
+
+
+        const db =
+            getFirestore(app);
+
+
+        /* =========================
+           ELEMENTS
+        ========================= */
+
+        const tableBody =
+            document.getElementById(
+                "tableBody"
+            );
+
+
+        const emptyState =
+            document.getElementById(
+                "emptyState"
+            );
+
+
+        const searchInput =
+            document.getElementById(
+                "searchInput"
+            );
+
+
+        const statusFilter =
+            document.getElementById(
+                "statusFilter"
+            );
+
+
+        const clearAllButton =
+            document.getElementById(
+                "clearAllButton"
+            );
+
+
+        const requestModal =
+            document.getElementById(
+                "requestModal"
+            );
+
+
+        const closeRequestModal =
+            document.getElementById(
+                "closeRequestModal"
+            );
+
+
+        const requestDetails =
+            document.getElementById(
+                "requestDetails"
+            );
+
+
+        let requests = [];
+
+
+        /* =========================
+           ESCAPE HTML
+        ========================= */
+
+        function escapeHTML(value) {
+
+            return String(
+                value ?? ""
+            )
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+        }
+
+
+        /* =========================
+           UPDATE STATS
+        ========================= */
+
+        function updateStats() {
+
+            const total =
+                requests.length;
+
+
+            const pending =
+                requests.filter(
+                    function(request) {
+
+                        return request.status ===
+                            "Pending";
+
+                    }
+                ).length;
+
+
+            const approved =
+                requests.filter(
+                    function(request) {
+
+                        return request.status ===
+                            "Approved";
+
+                    }
+                ).length;
+
+
+            const rejected =
+                requests.filter(
+                    function(request) {
+
+                        return request.status ===
+                            "Rejected";
+
+                    }
+                ).length;
+
+
+            document.getElementById(
+                "totalRequests"
+            ).textContent = total;
+
+
+            document.getElementById(
+                "pendingRequests"
+            ).textContent = pending;
+
+
+            document.getElementById(
+                "approvedRequests"
+            ).textContent = approved;
+
+
+            document.getElementById(
+                "rejectedRequests"
+            ).textContent = rejected;
+
+        }
+
+
+        /* =========================
+           DISPLAY REQUESTS
+        ========================= */
+
+        function displayRequests(
+            requestList
+        ) {
+
+            tableBody.innerHTML = "";
+
+
+            if (
+                requestList.length === 0
+            ) {
+
+                emptyState.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            emptyState.style.display =
+                "none";
+
+
+            requestList.forEach(
+                function(request) {
+
+                    const row =
+                        document.createElement(
+                            "tr"
+                        );
+
+
+                    row.innerHTML = `
+
+                        <td>
+
+                            <span class="request-id">
+
+                                ${escapeHTML(
+                                    request.requestId
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="resident-name">
+
+                                ${escapeHTML(
+                                    request.fullName
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            ${escapeHTML(
+                                request.barangay
+                            )}
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="service-name">
+
+                                ${escapeHTML(
+                                    request.service
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            ${escapeHTML(
+                                request.dateSubmitted
+                            )}
+
+                        </td>
+
+
+                        <td>
+
+                            ${escapeHTML(
+                                request.status
+                            )}
+
+                        </td>
+
+
+                        <td>
+
+                            <select
+                                class="status-select"
+                                data-id="${escapeHTML(
+                                    request.firestoreId
+                                )}">
+
+                                <option
+                                    value="Pending"
+                                    ${request.status === "Pending"
+                                        ? "selected"
+                                        : ""}>
+
+                                    Pending
+
+                                </option>
+
+
+                                <option
+                                    value="Approved"
+                                    ${request.status === "Approved"
+                                        ? "selected"
+                                        : ""}>
+
+                                    Approved
+
+                                </option>
+
+
+                                <option
+                                    value="Rejected"
+                                    ${request.status === "Rejected"
+                                        ? "selected"
+                                        : ""}>
+
+                                    Rejected
+
+                                </option>
+
+                            </select>
+
+                        </td>
+
+
+                        <td>
+
+                            <button
+                                class="view-button"
+                                data-id="${escapeHTML(
+                                    request.firestoreId
+                                )}"
+                                type="button">
+
+                                View
+
+                            </button>
+
+                        </td>
+
+                    `;
+
+
+                    tableBody.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+
+            addStatusListeners();
+
+            addViewListeners();
+
+        }
+
+
+        /* =========================
+           STATUS LISTENERS
+        ========================= */
+
+        function addStatusListeners() {
+
+            const statusSelects =
+                document.querySelectorAll(
+                    ".status-select"
+                );
+
+
+            statusSelects.forEach(
+                function(select) {
+
+                    select.addEventListener(
+                        "change",
+                        async function() {
+
+                            const firestoreId =
+                                this.getAttribute(
+                                    "data-id"
+                                );
+
+
+                            const newStatus =
+                                this.value;
+
+
+                            try {
+
+                                await updateDoc(
+                                    doc(
+                                        db,
+                                        "serviceRequests",
+                                        firestoreId
+                                    ),
+                                    {
+                                        status:
+                                            newStatus
+                                    }
+                                );
+
+
+                                const request =
+                                    requests.find(
+                                        function(item) {
+
+                                            return (
+                                                item.firestoreId ===
+                                                firestoreId
+                                            );
+
+                                        }
+                                    );
+
+
+                                if (request) {
+
+                                    request.status =
+                                        newStatus;
+
+                                }
+
+
+                                updateStats();
+
+
+                                alert(
+                                    "Request status updated successfully."
+                                );
+
+
+                            } catch (error) {
+
+                                console.error(
+                                    "Error updating status:",
+                                    error
+                                );
+
+
+                                alert(
+                                    "Unable to update request status."
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =========================
+           VIEW DETAILS
+        ========================= */
+
+        function addViewListeners() {
+
+            const viewButtons =
+                document.querySelectorAll(
+                    ".view-button"
+                );
+
+
+            viewButtons.forEach(
+                function(button) {
+
+                    button.addEventListener(
+                        "click",
+                        function() {
+
+                            const firestoreId =
+                                this.getAttribute(
+                                    "data-id"
+                                );
+
+
+                            const request =
+                                requests.find(
+                                    function(item) {
+
+                                        return (
+                                            item.firestoreId ===
+                                            firestoreId
+                                        );
+
+                                    }
+                                );
+
+
+                            if (!request) {
+
+                                return;
+
+                            }
+
+
+                            openRequestModal(
+                                request
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+
+
+        function openRequestModal(
+            request
+        ) {
+
+            requestDetails.innerHTML = `
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Request ID
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.requestId
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Full Name
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.fullName
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Email
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.email
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Contact Number
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.contactNumber
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Barangay
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.barangay
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Service
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.service
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Purpose
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.purpose
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail full">
+
+                    <div class="request-detail-label">
+                        Additional Information
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.additionalInfo ||
+                            "No additional information provided."
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Date Submitted
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.dateSubmitted
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                <div class="request-detail">
+
+                    <div class="request-detail-label">
+                        Current Status
+                    </div>
+
+                    <div class="request-detail-value">
+
+                        ${escapeHTML(
+                            request.status
+                        )}
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            requestModal.classList.add(
+                "show"
+            );
+
+        }
+
+
+        /* =========================
+           CLOSE MODAL
+        ========================= */
+
+        function closeModal() {
+
+            requestModal.classList.remove(
+                "show"
+            );
+
+        }
+
+
+        closeRequestModal.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        requestModal.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target ===
+                    requestModal
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           LOAD REQUESTS
+        ========================= */
+
+        async function loadRequests() {
+
+            try {
+
+                const querySnapshot =
+                    await getDocs(
+                        collection(
+                            db,
+                            "serviceRequests"
+                        )
+                    );
+
+
+                requests = [];
+
+
+                querySnapshot.forEach(
+                    function(document) {
+
+                        requests.push({
+
+                            firestoreId:
+                                document.id,
+
+                            ...document.data()
+
+                        });
+
+                    }
+                );
+
+
+                requests.reverse();
+
+
+                updateStats();
+
+
+                displayRequests(
+                    requests
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Error loading service requests:",
+                    error
+                );
+
+
+                tableBody.innerHTML = "";
+
+
+                emptyState.style.display =
+                    "block";
+
+
+                emptyState.innerHTML = `
+
+                    <h3>
+                        Unable to Load Requests
+                    </h3>
+
+                    <p>
+                        Please check your Firebase
+                        connection and try again.
+                    </p>
+
+                `;
+
+            }
+
+        }
+
+
+        /* =========================
+           FILTER REQUESTS
+        ========================= */
+
+        function filterRequests() {
+
+            const search =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const selectedStatus =
+                statusFilter.value;
+
+
+            const filtered =
+                requests.filter(
+                    function(request) {
+
+                        const matchesSearch =
+                            String(
+                                request.requestId || ""
+                            )
+                            .toLowerCase()
+                            .includes(search)
+
+                            ||
+
+                            String(
+                                request.fullName || ""
+                            )
+                            .toLowerCase()
+                            .includes(search)
+
+                            ||
+
+                            String(
+                                request.barangay || ""
+                            )
+                            .toLowerCase()
+                            .includes(search)
+
+                            ||
+
+                            String(
+                                request.service || ""
+                            )
+                            .toLowerCase()
+                            .includes(search);
+
+
+                        const matchesStatus =
+                            selectedStatus ===
+                            "All"
+
+                            ||
+
+                            request.status ===
+                            selectedStatus;
+
+
+                        return (
+                            matchesSearch &&
+                            matchesStatus
+                        );
+
+                    }
+                );
+
+
+            displayRequests(
+                filtered
+            );
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            filterRequests
+        );
+
+
+        statusFilter.addEventListener(
+            "change",
+            filterRequests
+        );
+
+
+        /* =========================
+           CLEAR ALL REQUESTS
+        ========================= */
+
+        clearAllButton.addEventListener(
+            "click",
+            async function() {
+
+                if (
+                    requests.length === 0
+                ) {
+
+                    alert(
+                        "There are no requests to clear."
+                    );
+
+                    return;
+
+                }
+
+
+                const confirmed =
+                    confirm(
+                        "Are you sure you want to delete all service requests?"
+                    );
+
+
+                if (!confirmed) {
+
+                    return;
+
+                }
+
+
+                try {
+
+                    for (
+                        const request
+                        of requests
+                    ) {
+
+                        await deleteDoc(
+                            doc(
+                                db,
+                                "serviceRequests",
+                                request.firestoreId
+                            )
+                        );
+
+                    }
+
+
+                    requests = [];
+
+
+                    updateStats();
+
+
+                    displayRequests(
+                        requests
+                    );
+
+
+                    alert(
+                        "All service requests have been deleted."
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Error deleting requests:",
+                        error
+                    );
+
+
+                    alert(
+                        "Unable to delete all requests."
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+
+        const mainNav =
+            document.querySelector(
+                ".main-nav"
+            );
+
+
+        menuButton.addEventListener(
+            "click",
+            function() {
+
+                mainNav.classList.toggle(
+                    "show-menu"
+                );
+
+            }
+        );
+
+
+        /* =========================
+           AUTH
+        ========================= */
+
+        onAuthStateChanged(
+            auth,
+            function(user) {
+
+                if (!user) {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                if (
+                    !user.email ||
+                    user.email.toLowerCase() !==
+                    "admin@gmail.com"
+                ) {
+
+                    window.location.href =
+                        "index.html";
+
+                    return;
+
+                }
+
+
+                const accountActions =
+                    document.getElementById(
+                        "accountActions"
+                    );
+
+
+                accountActions.innerHTML = `
+
+                    <span class="login-link">
+
+                        Welcome, Admin
+
+                    </span>
+
+                    <button
+                        class="header-signup"
+                        id="logoutButton"
+                        type="button">
+
+                        Logout
+
+                    </button>
+
+                `;
+
+
+                document
+                    .getElementById(
+                        "logoutButton"
+                    )
+                    .addEventListener(
+                        "click",
+                        async function() {
+
+                            try {
+
+                                await signOut(
+                                    auth
+                                );
+
+                                window.location.href =
+                                    "login.html";
+
+                            } catch (error) {
+
+                                console.error(
+                                    "Logout error:",
+                                    error
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+                loadRequests();
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

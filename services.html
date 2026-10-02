@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Lipa City Barangay Services Guide</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-symbol">
+                    L
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="services.html"
+                    class="active"
+                >
+                    Services
+                </a>
+
+                <!-- UPDATED: GO DIRECTLY TO BARANGAYS PAGE -->
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+            </nav>
+
+
+            <!-- AUTHENTICATION HEADER -->
+
+            <div
+                class="header-actions"
+                id="accountActions"
+            >
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="register.html"
+                    class="header-signup"
+                >
+                    Sign Up
+                </a>
+
+            </div>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         SMALL PHOTO COVER
+    ================================================== -->
+
+    <section class="services-cover">
+
+        <img
+            src="images/lipa-cover.jpg"
+            alt="Lipa City"
+        >
+
+        <div class="services-cover-overlay"></div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+        <!-- ==================================================
+             INTRO
+        ================================================== -->
+
+        <section class="services-intro">
+
+            <div class="services-intro-inner">
+
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <span>/</span>
+
+                    <span>
+                        Services
+                    </span>
+
+                </div>
+
+
+                <div class="intro-content">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            LIPA CITY COMMUNITY PORTAL
+                        </p>
+
+                        <h1>
+                            Barangay Services
+                        </h1>
+
+                    </div>
+
+
+                    <p class="intro-description">
+
+                        Find essential barangay services,
+                        requirements, locations, and
+                        community information in one place.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             STATISTICS
+        ================================================== -->
+
+        <section class="service-stats">
+
+            <div class="stats-container">
+
+
+                <div class="stat-item">
+
+                    <strong>
+                        06
+                    </strong>
+
+                    <span>
+                        Available Services
+                    </span>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <span>
+                        Service Categories
+                    </span>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <strong>
+                        06
+                    </strong>
+
+                    <span>
+                        Featured Services
+                    </span>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <strong>
+                        72
+                    </strong>
+
+                    <span>
+                        Lipa Barangays
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             FIND A SERVICE
+        ================================================== -->
+
+        <section class="find-service">
+
+            <div class="find-service-inner">
+
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        SERVICE DIRECTORY
+                    </p>
+
+                    <h2>
+                        Find a Service
+                    </h2>
+
+                    <p>
+                        Search for a service or select your
+                        barangay to find available services.
+                    </p>
+
+                </div>
+
+
+
+                <div class="service-filters">
+
+
+                    <!-- SEARCH -->
+
+                    <div class="search-wrapper">
+
+                        <span class="search-icon">
+                            ⌕
+                        </span>
+
+                        <input
+                            type="text"
+                            id="serviceSearch"
+                            class="service-search"
+                            placeholder="Search for a service..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+
+                    <!-- CATEGORY -->
+
+                    <select
+                        id="categoryFilter"
+                        class="service-filter-select"
+                    >
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="health">
+                            Health
+                        </option>
+
+                        <option value="documents">
+                            Documents
+                        </option>
+
+                        <option value="social">
+                            Social Services
+                        </option>
+
+                        <option value="community">
+                            Community
+                        </option>
+
+                        <option value="safety">
+                            Safety
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- BARANGAY -->
+
+                    <select
+                        id="barangayFilter"
+                        class="service-filter-select"
+                    >
+
+                        <option value="all">
+                            All Barangays
+                        </option>
+
+                        <option value="Adya">
+                            Adya
+                        </option>
+
+                        <option value="Anilao">
+                            Anilao
+                        </option>
+
+                        <option value="Anilao-Labac">
+                            Anilao-Labac
+                        </option>
+
+                        <option value="Antipolo Del Norte">
+                            Antipolo Del Norte
+                        </option>
+
+                        <option value="Antipolo Del Sur">
+                            Antipolo Del Sur
+                        </option>
+
+                        <option value="Bagong Pook">
+                            Bagong Pook
+                        </option>
+
+                        <option value="San Sebastian">
+                            San Sebastian
+                        </option>
+
+                        <option value="Balintawak">
+                            Balintawak
+                        </option>
+
+                        <option value="Banaybanay">
+                            Banaybanay
+                        </option>
+
+                        <option value="Bolbok">
+                            Bolbok
+                        </option>
+
+                        <option value="Bugtong na Pulo">
+                            Bugtong na Pulo
+                        </option>
+
+                        <option value="Bulacnin">
+                            Bulacnin
+                        </option>
+
+                        <option value="Bulaklakan">
+                            Bulaklakan
+                        </option>
+
+                        <option value="Calamias">
+                            Calamias
+                        </option>
+
+                        <option value="Cumba">
+                            Cumba
+                        </option>
+
+                        <option value="Dagatan">
+                            Dagatan
+                        </option>
+
+                        <option value="Duhatan">
+                            Duhatan
+                        </option>
+
+                        <option value="Halang">
+                            Halang
+                        </option>
+
+                        <option value="Inosloban">
+                            Inosloban
+                        </option>
+
+                        <option value="Kayumanggi">
+                            Kayumanggi
+                        </option>
+
+                        <option value="Latag">
+                            Latag
+                        </option>
+
+                        <option value="Lodlod">
+                            Lodlod
+                        </option>
+
+                        <option value="Lumbang">
+                            Lumbang
+                        </option>
+
+                        <option value="Mabini">
+                            Mabini
+                        </option>
+
+                        <option value="Malagonlong">
+                            Malagonlong
+                        </option>
+
+                        <option value="Malitlit">
+                            Malitlit
+                        </option>
+
+                        <option value="Marauoy">
+                            Marauoy
+                        </option>
+
+                        <option value="Mataas Na Lupa">
+                            Mataas Na Lupa
+                        </option>
+
+                        <option value="Munting Pulo">
+                            Munting Pulo
+                        </option>
+
+                        <option value="Pagolingin Bata">
+                            Pagolingin Bata
+                        </option>
+
+                        <option value="Pagolingin East">
+                            Pagolingin East
+                        </option>
+
+                        <option value="Pagolingin West">
+                            Pagolingin West
+                        </option>
+
+                        <option value="Pangao">
+                            Pangao
+                        </option>
+
+                        <option value="Pinagkawitan">
+                            Pinagkawitan
+                        </option>
+
+                        <option value="Pinagtongulan">
+                            Pinagtongulan
+                        </option>
+
+                        <option value="Plaridel">
+                            Plaridel
+                        </option>
+
+                        <option value="Poblacion Barangay 1">
+                            Poblacion Barangay 1
+                        </option>
+
+                        <option value="Poblacion Barangay 10">
+                            Poblacion Barangay 10
+                        </option>
+
+                        <option value="Poblacion Barangay 11">
+                            Poblacion Barangay 11
+                        </option>
+
+                        <option value="Poblacion Barangay 2">
+                            Poblacion Barangay 2
+                        </option>
+
+                        <option value="Poblacion Barangay 3">
+                            Poblacion Barangay 3
+                        </option>
+
+                        <option value="Poblacion Barangay 4">
+                            Poblacion Barangay 4
+                        </option>
+
+                        <option value="Poblacion Barangay 5">
+                            Poblacion Barangay 5
+                        </option>
+
+                        <option value="Poblacion Barangay 6">
+                            Poblacion Barangay 6
+                        </option>
+
+                        <option value="Poblacion Barangay 7">
+                            Poblacion Barangay 7
+                        </option>
+
+                        <option value="Poblacion Barangay 8">
+                            Poblacion Barangay 8
+                        </option>
+
+                        <option value="Poblacion Barangay 9">
+                            Poblacion Barangay 9
+                        </option>
+
+                        <option value="Pusil">
+                            Pusil
+                        </option>
+
+                        <option value="Quezon">
+                            Quezon
+                        </option>
+
+                        <option value="Rizal">
+                            Rizal
+                        </option>
+
+                        <option value="Sabang">
+                            Sabang
+                        </option>
+
+                        <option value="Sampaguita">
+                            Sampaguita
+                        </option>
+
+                        <option value="San Benito">
+                            San Benito
+                        </option>
+
+                        <option value="San Carlos">
+                            San Carlos
+                        </option>
+
+                        <option value="San Celestino">
+                            San Celestino
+                        </option>
+
+                        <option value="San Francisco">
+                            San Francisco
+                        </option>
+
+                        <option value="San Guillermo">
+                            San Guillermo
+                        </option>
+
+                        <option value="San Jose">
+                            San Jose
+                        </option>
+
+                        <option value="San Lucas">
+                            San Lucas
+                        </option>
+
+                        <option value="San Salvador">
+                            San Salvador
+                        </option>
+
+                        <option value="Sapac">
+                            Sapac
+                        </option>
+
+                        <option value="Sico">
+                            Sico
+                        </option>
+
+                        <option value="Santo Niño">
+                            Santo Niño
+                        </option>
+
+                        <option value="Santo Toribio">
+                            Santo Toribio
+                        </option>
+
+                        <option value="Talisay">
+                            Talisay
+                        </option>
+
+                        <option value="Tambo">
+                            Tambo
+                        </option>
+
+                        <option value="Tangob">
+                            Tangob
+                        </option>
+
+                        <option value="Tanguay">
+                            Tanguay
+                        </option>
+
+                        <option value="Tibig">
+                            Tibig
+                        </option>
+
+                        <option value="Tipacan">
+                            Tipacan
+                        </option>
+
+                        <option value="Poblacion Barangay 9-A">
+                            Poblacion Barangay 9-A
+                        </option>
+
+                        <option value="Barangay 12">
+                            Barangay 12
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- CLEAR -->
+
+                    <button
+                        type="button"
+                        id="clearFilters"
+                        class="clear-filters"
+                    >
+                        Clear
+                    </button>
+
+
+                </div>
+
+
+                <!-- SELECTED BARANGAY -->
+
+                <div
+                    id="selectedBarangay"
+                    class="selected-barangay"
+                >
+
+                    <span>
+                        AVAILABLE SERVICES
+                    </span>
+
+                    <strong>
+                        All Barangays
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             BROWSE BY CATEGORY
+        ================================================== -->
+
+        <section class="categories-section">
+
+            <div class="categories-container">
+
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        BROWSE SERVICES
+                    </p>
+
+                    <h2>
+                        Browse by Category
+                    </h2>
+
+                </div>
+
+
+
+                <div class="category-grid">
+
+
+                    <!-- HEALTH -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="health"
+                    >
+
+                        <div>
+
+                            <span class="category-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Health
+                            </h3>
+
+                            <p>
+                                Health centers and
+                                community health services.
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- DOCUMENTS -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="documents"
+                    >
+
+                        <div>
+
+                            <span class="category-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Documents
+                            </h3>
+
+                            <p>
+                                Barangay clearances,
+                                certificates, and records.
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- SOCIAL -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="social"
+                    >
+
+                        <div>
+
+                            <span class="category-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Social Services
+                            </h3>
+
+                            <p>
+                                Community assistance and
+                                social support.
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- COMMUNITY -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="community"
+                    >
+
+                        <div>
+
+                            <span class="category-number">
+                                04
+                            </span>
+
+                            <h3>
+                                Community
+                            </h3>
+
+                            <p>
+                                Programs, activities, and
+                                community initiatives.
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- SAFETY -->
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="safety"
+                    >
+
+                        <div>
+
+                            <span class="category-number">
+                                05
+                            </span>
+
+                            <h3>
+                                Safety
+                            </h3>
+
+                            <p>
+                                Barangay safety and
+                                community assistance.
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- ALL SERVICES -->
+
+                    <button
+                        type="button"
+                        class="category-card category-card-dark"
+                        id="allServicesButton"
+                    >
+
+                        <div>
+
+                            <span class="category-number">
+                                06
+                            </span>
+
+                            <h3>
+                                All Services
+                            </h3>
+
+                            <p>
+                                Browse the complete
+                                service directory.
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ALL SERVICES
+        ================================================== -->
+
+        <section class="all-services">
+
+            <div class="all-services-container">
+
+
+                <div class="services-list-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            DIRECTORY
+                        </p>
+
+                        <h2>
+                            All Services
+                        </h2>
+
+                    </div>
+
+
+                    <span id="resultCount">
+                        Showing 6 services
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    class="services-grid"
+                    id="servicesGrid"
+                >
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article
+                        class="service-card"
+                        data-category="documents"
+                    >
+
+                        <div class="service-card-top">
+
+                            <span class="service-category">
+                                Documents
+                            </span>
+
+                            <span class="service-number">
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Barangay Clearance
+                        </h3>
+
+
+                        <p>
+                            Obtain a barangay clearance
+                            for employment, school,
+                            business, and other requirements.
+                        </p>
+
+
+                        <div class="service-divider"></div>
+
+
+                        <div class="service-details">
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    AVAILABLE IN
+                                </span>
+
+                                <span class="detail-value">
+                                    All Barangays
+                                </span>
+
+                            </div>
+
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    LOCATION
+                                </span>
+
+                                <span class="detail-value">
+                                    Barangay Hall
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="view-service"
+                            data-service="Barangay Clearance"
+                        >
+                            View Service →
+                        </button>
+
+
+                    </article>
+
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article
+                        class="service-card"
+                        data-category="documents"
+                    >
+
+                        <div class="service-card-top">
+
+                            <span class="service-category">
+                                Documents
+                            </span>
+
+                            <span class="service-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Barangay Certificate
+                        </h3>
+
+
+                        <p>
+                            Request barangay certification
+                            for residency, indigency,
+                            and other official purposes.
+                        </p>
+
+
+                        <div class="service-divider"></div>
+
+
+                        <div class="service-details">
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    AVAILABLE IN
+                                </span>
+
+                                <span class="detail-value">
+                                    All Barangays
+                                </span>
+
+                            </div>
+
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    LOCATION
+                                </span>
+
+                                <span class="detail-value">
+                                    Barangay Hall
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="view-service"
+                            data-service="Barangay Certificate"
+                        >
+                            View Service →
+                        </button>
+
+
+                    </article>
+
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article
+                        class="service-card"
+                        data-category="health"
+                    >
+
+                        <div class="service-card-top">
+
+                            <span class="service-category">
+                                Health
+                            </span>
+
+                            <span class="service-number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Barangay Health Center
+                        </h3>
+
+
+                        <p>
+                            Basic health services and
+                            community health assistance
+                            available to residents.
+                        </p>
+
+
+                        <div class="service-divider"></div>
+
+
+                        <div class="service-details">
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    AVAILABLE IN
+                                </span>
+
+                                <span class="detail-value">
+                                    All Barangays
+                                </span>
+
+                            </div>
+
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    LOCATION
+                                </span>
+
+                                <span class="detail-value">
+                                    Barangay Health Center
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="view-service"
+                            data-service="Barangay Health Center"
+                        >
+                            View Service →
+                        </button>
+
+
+                    </article>
+
+
+
+                    <!-- SERVICE 04 -->
+
+                    <article
+                        class="service-card"
+                        data-category="social"
+                    >
+
+                        <div class="service-card-top">
+
+                            <span class="service-category">
+                                Social Services
+                            </span>
+
+                            <span class="service-number">
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Social Assistance
+                        </h3>
+
+
+                        <p>
+                            Information about available
+                            community assistance and
+                            social support programs.
+                        </p>
+
+
+                        <div class="service-divider"></div>
+
+
+                        <div class="service-details">
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    AVAILABLE IN
+                                </span>
+
+                                <span class="detail-value">
+                                    All Barangays
+                                </span>
+
+                            </div>
+
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    LOCATION
+                                </span>
+
+                                <span class="detail-value">
+                                    Barangay Hall
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="view-service"
+                            data-service="Social Assistance"
+                        >
+                            View Service →
+                        </button>
+
+
+                    </article>
+
+
+
+                    <!-- SERVICE 05 -->
+
+                    <article
+                        class="service-card"
+                        data-category="community"
+                    >
+
+                        <div class="service-card-top">
+
+                            <span class="service-category">
+                                Community
+                            </span>
+
+                            <span class="service-number">
+                                05
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Community Programs
+                        </h3>
+
+
+                        <p>
+                            Access information about barangay
+                            programs, activities, and
+                            community initiatives.
+                        </p>
+
+
+                        <div class="service-divider"></div>
+
+
+                        <div class="service-details">
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    AVAILABLE IN
+                                </span>
+
+                                <span class="detail-value">
+                                    All Barangays
+                                </span>
+
+                            </div>
+
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    LOCATION
+                                </span>
+
+                                <span class="detail-value">
+                                    Barangay Hall
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="view-service"
+                            data-service="Community Programs"
+                        >
+                            View Service →
+                        </button>
+
+
+                    </article>
+
+
+
+                    <!-- SERVICE 06 -->
+
+                    <article
+                        class="service-card"
+                        data-category="safety"
+                    >
+
+                        <div class="service-card-top">
+
+                            <span class="service-category">
+                                Safety
+                            </span>
+
+                            <span class="service-number">
+                                06
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Barangay Safety Assistance
+                        </h3>
+
+
+                        <p>
+                            Information about barangay
+                            safety assistance and
+                            community security concerns.
+                        </p>
+
+
+                        <div class="service-divider"></div>
+
+
+                        <div class="service-details">
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    AVAILABLE IN
+                                </span>
+
+                                <span class="detail-value">
+                                    All Barangays
+                                </span>
+
+                            </div>
+
+
+                            <div class="service-detail">
+
+                                <span class="detail-label">
+                                    LOCATION
+                                </span>
+
+                                <span class="detail-value">
+                                    Barangay Hall
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="view-service"
+                            data-service="Barangay Safety Assistance"
+                        >
+                            View Service →
+                        </button>
+
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- NO RESULTS -->
+
+                <div
+                    id="noResults"
+                    class="no-results"
+                >
+
+                    <h3>
+                        No Services Found
+                    </h3>
+
+                    <p>
+                        Try another keyword or category.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             HELP
+        ================================================== -->
+
+        <section class="services-help">
+
+            <div class="services-help-inner">
+
+                <p class="eyebrow">
+                    NEED ASSISTANCE?
+                </p>
+
+                <h2>
+                    Can't find what you need?
+                </h2>
+
+                <p>
+                    Try searching using a service name,
+                    category, or select your barangay.
+                </p>
+
+                <a
+                    href="barangays.html"
+                    class="help-button"
+                >
+                    Browse Barangays →
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    L
+                </div>
+
+                <div>
+
+                    <strong>
+                        LIPA CITY
+                    </strong>
+
+                    <span>
+                        Barangay Services Guide
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="barangays.html">
+                    Barangays
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lipa Barangay Services Guide.
+                Academic Project.
+            </p>
+
+            <p>
+                Platform Technologies
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         FIREBASE AUTHENTICATION
+    ================================================== -->
+
+    <script type="module">
+
+        import { initializeApp }
+            from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        }
+            from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+        /* ==========================================
+           FIREBASE CONFIG
+        ========================================== */
+
+        const firebaseConfig = {
+
+            apiKey:
+                "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+            authDomain:
+                "lipabarangayservices.firebaseapp.com",
+
+            projectId:
+                "lipabarangayservices",
+
+            storageBucket:
+                "lipabarangayservices.firebasestorage.app",
+
+            messagingSenderId:
+                "995460316863",
+
+            appId:
+                "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+            measurementId:
+                "G-2N9EDEC3ES"
+
+        };
+
+
+        /* ==========================================
+           INITIALIZE FIREBASE
+        ========================================== */
+
+        const app =
+            initializeApp(firebaseConfig);
+
+        const auth =
+            getAuth(app);
+
+
+        /* ==========================================
+           ACCOUNT HEADER
+        ========================================== */
+
+        const accountActions =
+            document.getElementById(
+                "accountActions"
+            );
+
+
+        onAuthStateChanged(
+            auth,
+            function (user) {
+
+                if (user) {
+
+                    const displayName =
+                        user.displayName ||
+                        user.email ||
+                        "User";
+
+
+                    accountActions.innerHTML = `
+
+                        <span class="login-link">
+                            Welcome, ${displayName}
+                        </span>
+
+                        <button
+                            type="button"
+                            class="header-signup"
+                            id="logoutButton"
+                        >
+                            Logout
+                        </button>
+
+                    `;
+
+
+                    const logoutButton =
+                        document.getElementById(
+                            "logoutButton"
+                        );
+
+
+                    logoutButton.addEventListener(
+                        "click",
+                        async function () {
+
+                            try {
+
+                                await signOut(auth);
+
+                                window.location.href =
+                                    "index.html";
+
+                            } catch (error) {
+
+                                console.error(
+                                    "Logout error:",
+                                    error
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+                } else {
+
+                    accountActions.innerHTML = `
+
+                        <a
+                            href="login.html"
+                            class="login-link"
+                        >
+                            Login
+                        </a>
+
+                        <a
+                            href="register.html"
+                            class="header-signup"
+                        >
+                            Sign Up
+                        </a>
+
+                    `;
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+
+    <!-- ==================================================
+         SERVICES JS
+    ================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* ==========================================
+                   ELEMENTS
+                ========================================== */
+
+                const searchInput =
+                    document.getElementById(
+                        "serviceSearch"
+                    );
+
+                const categoryFilter =
+                    document.getElementById(
+                        "categoryFilter"
+                    );
+
+                const barangayFilter =
+                    document.getElementById(
+                        "barangayFilter"
+                    );
+
+                const clearFilters =
+                    document.getElementById(
+                        "clearFilters"
+                    );
+
+                const allServicesButton =
+                    document.getElementById(
+                        "allServicesButton"
+                    );
+
+                const resultCount =
+                    document.getElementById(
+                        "resultCount"
+                    );
+
+                const noResults =
+                    document.getElementById(
+                        "noResults"
+                    );
+
+                const selectedBarangay =
+                    document.getElementById(
+                        "selectedBarangay"
+                    );
+
+                const cards =
+                    document.querySelectorAll(
+                        ".service-card"
+                    );
+
+
+
+                /* ==========================================
+                   FILTER SERVICES
+                ========================================== */
+
+                function filterServices() {
+
+
+                    const search =
+                        searchInput.value
+                            .toLowerCase()
+                            .trim();
+
+
+                    const category =
+                        categoryFilter.value
+                            .toLowerCase();
+
+
+                    let count = 0;
+
+
+                    cards.forEach(
+                        function (card) {
+
+
+                            const title =
+                                card.querySelector(
+                                    "h3"
+                                )
+                                .textContent
+                                .toLowerCase();
+
+
+                            const description =
+                                card.querySelector(
+                                    ".service-card > p"
+                                )
+                                .textContent
+                                .toLowerCase();
+
+
+                            const cardCategory =
+                                card.dataset.category
+                                    .toLowerCase();
+
+
+                            const searchableText =
+                                title +
+                                " " +
+                                description +
+                                " " +
+                                cardCategory;
+
+
+                            const searchMatch =
+                                search === "" ||
+                                searchableText.includes(
+                                    search
+                                );
+
+
+                            const categoryMatch =
+                                category === "all" ||
+                                cardCategory === category;
+
+
+                            if (
+                                searchMatch &&
+                                categoryMatch
+                            ) {
+
+                                card.style.display =
+                                    "flex";
+
+                                count++;
+
+                            } else {
+
+                                card.style.display =
+                                    "none";
+
+                            }
+
+                        }
+                    );
+
+
+
+                    /* ==========================================
+                       RESULT COUNT
+                    ========================================== */
+
+                    if (count === 0) {
+
+                        noResults.style.display =
+                            "block";
+
+                        resultCount.textContent =
+                            "No services found";
+
+                    } else {
+
+                        noResults.style.display =
+                            "none";
+
+                        resultCount.textContent =
+                            "Showing " +
+                            count +
+                            " service" +
+                            (
+                                count !== 1
+                                    ? "s"
+                                    : ""
+                            );
+
+                    }
+
+                }
+
+
+
+                /* ==========================================
+                   BARANGAY SELECTION
+                ========================================== */
+
+                barangayFilter.addEventListener(
+                    "change",
+                    function () {
+
+
+                        const selected =
+                            this.value;
+
+
+                        if (
+                            selected === "all"
+                        ) {
+
+                            selectedBarangay
+                                .querySelector(
+                                    "strong"
+                                )
+                                .textContent =
+                                "All Barangays";
+
+                        } else {
+
+                            selectedBarangay
+                                .querySelector(
+                                    "strong"
+                                )
+                                .textContent =
+                                selected;
+
+                        }
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   SEARCH
+                ========================================== */
+
+                searchInput.addEventListener(
+                    "input",
+                    function () {
+
+                        filterServices();
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   CATEGORY FILTER
+                ========================================== */
+
+                categoryFilter.addEventListener(
+                    "change",
+                    function () {
+
+                        filterServices();
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   CLEAR
+                ========================================== */
+
+                clearFilters.addEventListener(
+                    "click",
+                    function () {
+
+
+                        searchInput.value = "";
+
+                        categoryFilter.value =
+                            "all";
+
+                        barangayFilter.value =
+                            "all";
+
+
+                        selectedBarangay
+                            .querySelector(
+                                "strong"
+                            )
+                            .textContent =
+                            "All Barangays";
+
+
+                        filterServices();
+
+
+                        searchInput.focus();
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   CATEGORY CARDS
+                ========================================== */
+
+                document
+                    .querySelectorAll(
+                        ".category-card[data-category]"
+                    )
+                    .forEach(
+                        function (button) {
+
+
+                            button.addEventListener(
+                                "click",
+                                function () {
+
+
+                                    searchInput.value =
+                                        "";
+
+
+                                    categoryFilter.value =
+                                        this.dataset.category;
+
+
+                                    filterServices();
+
+
+                                    document
+                                        .querySelector(
+                                            ".all-services"
+                                        )
+                                        .scrollIntoView({
+                                            behavior:
+                                                "smooth"
+                                        });
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+
+                /* ==========================================
+                   ALL SERVICES
+                ========================================== */
+
+                allServicesButton.addEventListener(
+                    "click",
+                    function () {
+
+
+                        searchInput.value =
+                            "";
+
+
+                        categoryFilter.value =
+                            "all";
+
+
+                        filterServices();
+
+
+                        document
+                            .querySelector(
+                                ".all-services"
+                            )
+                            .scrollIntoView({
+                                behavior:
+                                    "smooth"
+                            });
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   VIEW SERVICE
+                ========================================== */
+
+                document
+                    .querySelectorAll(
+                        ".view-service"
+                    )
+                    .forEach(
+                        function (button) {
+
+                            button.addEventListener(
+                                "click",
+                                function () {
+
+                                    const service =
+                                        this.dataset.service;
+
+
+                                    const servicePages = {
+
+                                        "Barangay Clearance":
+                                            "clearance",
+
+                                        "Barangay Certificate":
+                                            "certificate",
+
+                                        "Barangay Health Center":
+                                            "health",
+
+                                        "Social Assistance":
+                                            "social",
+
+                                        "Community Programs":
+                                            "community",
+
+                                        "Barangay Safety Assistance":
+                                            "safety"
+
+                                    };
+
+
+                                    const serviceKey =
+                                        servicePages[service];
+
+
+                                    if (serviceKey) {
+
+                                        window.location.href =
+                                            "service-details.html?service=" +
+                                            serviceKey;
+
+                                    }
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+
+                /* ==========================================
+                   INITIAL LOAD
+                ========================================== */
+
+                filterServices();
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Request Service | Lipa City Barangay Services Guide</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        .request-page {
+            padding: 70px 20px;
+            background: #f8f8f6;
+            min-height: 70vh;
+        }
+
+        .request-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .request-header {
+            margin-bottom: 35px;
+        }
+
+        .request-header .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .request-header h1 {
+            font-size: 42px;
+            margin: 0 0 15px;
+            color: #111;
+        }
+
+        .request-header p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .request-form {
+            background: #fff;
+            padding: 40px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d8d8d8;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #222;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .request-button {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            background: #111;
+            color: #fff;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .request-button:hover {
+            opacity: 0.85;
+        }
+
+        .success-message {
+            display: none;
+            background: #eef7ef;
+            border: 1px solid #b8d8bc;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .success-message p {
+            margin: 7px 0;
+            color: #444;
+        }
+
+        .success-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .success-actions a {
+            display: inline-block;
+            padding: 11px 18px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        .primary-action {
+            background: #111;
+            color: #fff;
+        }
+
+        .secondary-action {
+            border: 1px solid #ccc;
+            color: #222;
+            background: #fff;
+        }
+
+        .login-notice {
+            display: none;
+            background: #fff3e8;
+            border: 1px solid #e6c8a8;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .login-notice.show {
+            display: block;
+        }
+
+        .login-notice p {
+            margin: 0 0 15px;
+        }
+
+        .login-notice a {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        .my-requests-link {
+            display: block;
+            text-align: right;
+            margin-bottom: 20px;
+            color: #222;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+
+            .request-page {
+                padding: 45px 15px;
+            }
+
+            .request-form {
+                padding: 25px;
+            }
+
+            .request-header h1 {
+                font-size: 32px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-symbol">L</div>
+
+            <div class="brand-text">
+                <strong>LIPA CITY</strong>
+                <span>Barangay Services Guide</span>
+            </div>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="index.html#barangays">Barangays</a>
+
+            <a href="index.html#about">About</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="login.html" class="login-link">
+                Login
+            </a>
+
+            <a href="register.html" class="header-signup">
+                Sign Up
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="request-page">
+
+    <div class="request-container">
+
+        <div class="request-header">
+
+            <div class="eyebrow">
+                LIPA CITY COMMUNITY PORTAL
+            </div>
+
+            <h1>Request a Service</h1>
+
+            <p>
+                Complete the form below to submit your barangay service request.
+            </p>
+
+        </div>
+
+
+        <div id="loginNotice" class="login-notice">
+
+            <p>
+                You need to be logged in before submitting a service request.
+            </p>
+
+            <a href="login.html">
+                Login to Continue
+            </a>
+
+        </div>
+
+
+        <div id="successMessage" class="success-message">
+
+            <h2>Request Submitted Successfully!</h2>
+
+            <p>
+                Your service request has been saved successfully.
+            </p>
+
+            <p>
+                <strong>Request ID:</strong>
+                <span id="successRequestId"></span>
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                Pending
+            </p>
+
+            <div class="success-actions">
+
+                <a
+                    href="my-service-requests.html"
+                    class="primary-action">
+                    View My Service Requests
+                </a>
+
+                <a
+                    href="services.html"
+                    class="secondary-action">
+                    Back to Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="my-service-requests.html"
+            class="my-requests-link">
+            View My Service Requests →
+        </a>
+
+
+        <form
+            id="requestForm"
+            class="request-form">
+
+            <div class="form-group">
+
+                <label for="service">
+                    Service Requested
+                </label>
+
+                <select id="service" required>
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+                    <option value="clearance">
+                        Barangay Clearance
+                    </option>
+
+                    <option value="certificate">
+                        Barangay Certificate
+                    </option>
+
+                    <option value="health">
+                        Barangay Health Center
+                    </option>
+
+                    <option value="social">
+                        Social Assistance
+                    </option>
+
+                    <option value="community">
+                        Community Programs
+                    </option>
+
+                    <option value="safety">
+                        Barangay Safety Assistance
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="contactNumber">
+                        Contact Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="contactNumber"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="barangay">
+                        Barangay
+                    </label>
+
+                    <select id="barangay" required>
+
+                        <option value="">
+                            Select your barangay
+                        </option>
+
+                        <option>Adya</option>
+                        <option>Anilao</option>
+                        <option>Anilao-Labac</option>
+                        <option>Antipolo Del Norte</option>
+                        <option>Antipolo Del Sur</option>
+                        <option>Bagong Pook</option>
+                        <option>San Sebastian</option>
+                        <option>Balintawak</option>
+                        <option>Banaybanay</option>
+                        <option>Bolbok</option>
+                        <option>Bugtong na Pulo</option>
+                        <option>Bulacnin</option>
+                        <option>Bulaklakan</option>
+                        <option>Calamias</option>
+                        <option>Cumba</option>
+                        <option>Dagatan</option>
+                        <option>Duhatan</option>
+                        <option>Halang</option>
+                        <option>Inosloban</option>
+                        <option>Kayumanggi</option>
+                        <option>Latag</option>
+                        <option>Lodlod</option>
+                        <option>Lumbang</option>
+                        <option>Mabini</option>
+                        <option>Malagonlong</option>
+                        <option>Malitlit</option>
+                        <option>Marauoy</option>
+                        <option>Mataas Na Lupa</option>
+                        <option>Munting Pulo</option>
+                        <option>Pagolingin Bata</option>
+                        <option>Pagolingin East</option>
+                        <option>Pagolingin West</option>
+                        <option>Pangao</option>
+                        <option>Pinagkawitan</option>
+                        <option>Pinagtongulan</option>
+                        <option>Plaridel</option>
+                        <option>Poblacion Barangay 1</option>
+                        <option>Poblacion Barangay 10</option>
+                        <option>Poblacion Barangay 11</option>
+                        <option>Poblacion Barangay 2</option>
+                        <option>Poblacion Barangay 3</option>
+                        <option>Poblacion Barangay 4</option>
+                        <option>Poblacion Barangay 5</option>
+                        <option>Poblacion Barangay 6</option>
+                        <option>Poblacion Barangay 7</option>
+                        <option>Poblacion Barangay 8</option>
+                        <option>Poblacion Barangay 9</option>
+                        <option>Poblacion Barangay 9-A</option>
+                        <option>Pusil</option>
+                        <option>Quezon</option>
+                        <option>Rizal</option>
+                        <option>Sabang</option>
+                        <option>Sampaguita</option>
+                        <option>San Benito</option>
+                        <option>San Carlos</option>
+                        <option>San Celestino</option>
+                        <option>San Francisco</option>
+                        <option>San Guillermo</option>
+                        <option>San Isidro</option>
+                        <option>San Jose</option>
+                        <option>San Lucas</option>
+                        <option>San Salvador</option>
+                        <option>Sico</option>
+                        <option>Santo Niño</option>
+                        <option>Santo Toribio</option>
+                        <option>Talisay</option>
+                        <option>Tambo</option>
+                        <option>Tangob</option>
+                        <option>Tangway</option>
+                        <option>Tibig</option>
+                        <option>Tipacan</option>
+                        <option>Barangay 12</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="purpose">
+                    Purpose
+                </label>
+
+                <textarea
+                    id="purpose"
+                    placeholder="Please state the purpose of your request."
+                    required></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="additionalInfo">
+                    Additional Information
+                </label>
+
+                <textarea
+                    id="additionalInfo"
+                    placeholder="Add any additional information, if necessary."></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="request-button">
+                Submit Service Request
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                L
+            </div>
+
+            <div>
+
+                <strong>
+                    LIPA CITY
+                </strong>
+
+                <span>
+                    Barangay Services Guide
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="index.html#barangays">
+                Barangays
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lipa City Barangay Services Guide.
+            Academic Project.
+        </p>
+
+        <p>
+            Platform Technologies
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ==================================================
+     FIREBASE + FIRESTORE
+================================================== -->
+
+<script type="module">
+
+    /*
+     * ==================================================
+     * FIREBASE IMPORTS
+     * ==================================================
+     */
+
+    import { initializeApp }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+    import {
+        getAuth,
+        onAuthStateChanged
+    }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+    import {
+        getFirestore,
+        collection,
+        addDoc
+    }
+        from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
+
+    /*
+     * ==================================================
+     * FIREBASE CONFIGURATION
+     * ==================================================
+     */
+
+    const firebaseConfig = {
+
+        apiKey: "AIzaSyATdFREEFoy8-7A0Uox9DNXXO7qairhnts",
+
+        authDomain: "lipabarangayservices.firebaseapp.com",
+
+        projectId: "lipabarangayservices",
+
+        storageBucket: "lipabarangayservices.firebasestorage.app",
+
+        messagingSenderId: "995460316863",
+
+        appId: "1:995460316863:web:ce4ad089a11d55730ad00a",
+
+        measurementId: "G-2N9EDEC3ES"
+
+    };
+
+
+    /*
+     * ==================================================
+     * INITIALIZE FIREBASE
+     * ==================================================
+     */
+
+    const app =
+        initializeApp(firebaseConfig);
+
+    const auth =
+        getAuth(app);
+
+    const db =
+        getFirestore(app);
+
+
+    /*
+     * ==================================================
+     * ELEMENTS
+     * ==================================================
+     */
+
+    const requestForm =
+        document.getElementById("requestForm");
+
+    const loginNotice =
+        document.getElementById("loginNotice");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+    const successRequestId =
+        document.getElementById("successRequestId");
+
+    const myRequestsLink =
+        document.querySelector(".my-requests-link");
+
+
+    /*
+     * ==================================================
+     * CURRENT USER
+     * ==================================================
+     */
+
+    let currentUser = null;
+
+
+    /*
+     * ==================================================
+     * SERVICE NAMES
+     * ==================================================
+     */
+
+    const serviceNames = {
+
+        clearance: "Barangay Clearance",
+
+        certificate: "Barangay Certificate",
+
+        health: "Barangay Health Center",
+
+        social: "Social Assistance",
+
+        community: "Community Programs",
+
+        safety: "Barangay Safety Assistance"
+
+    };
+
+
+    /*
+     * ==================================================
+     * GET VALUES FROM URL
+     * ==================================================
+     */
+
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const selectedService =
+        urlParams.get("service");
+
+    const selectedBarangay =
+        urlParams.get("barangay");
+
+
+    /*
+     * ==================================================
+     * PRESELECT SERVICE
+     * ==================================================
+     */
+
+    if (
+        selectedService &&
+        serviceNames[selectedService]
+    ) {
+
+        document.getElementById("service").value =
+            selectedService;
+
+    }
+
+
+    /*
+     * ==================================================
+     * PRESELECT BARANGAY
+     * ==================================================
+     */
+
+    if (selectedBarangay) {
+
+        document.getElementById("barangay").value =
+            decodeURIComponent(selectedBarangay);
+
+    }
+
+
+    /*
+     * ==================================================
+     * WAIT FOR FIREBASE LOGIN
+     * ==================================================
+     */
+
+    onAuthStateChanged(auth, function (user) {
+
+        currentUser = user;
+
+
+        if (user) {
+
+            /*
+             * USER IS LOGGED IN
+             */
+
+            loginNotice.classList.remove("show");
+
+            requestForm.style.display = "block";
+
+            myRequestsLink.style.display = "block";
+
+
+            /*
+             * AUTOMATICALLY FILL ACCOUNT INFORMATION
+             */
+
+            const fullName =
+                document.getElementById("fullName");
+
+            const email =
+                document.getElementById("email");
+
+
+            if (user.displayName) {
+
+                fullName.value =
+                    user.displayName;
+
+            }
+
+
+            if (user.email) {
+
+                email.value =
+                    user.email;
+
+            }
+
+        } else {
+
+            /*
+             * USER IS NOT LOGGED IN
+             */
+
+            loginNotice.classList.add("show");
+
+            requestForm.style.display = "none";
+
+            myRequestsLink.style.display = "none";
+
+        }
+
+    });
+
+
+    /*
+     * ==================================================
+     * SUBMIT SERVICE REQUEST
+     * ==================================================
+     */
+
+    requestForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+
+            /*
+             * MAKE SURE USER IS LOGGED IN
+             */
+
+            if (!currentUser) {
+
+                loginNotice.classList.add("show");
+
+                requestForm.style.display = "none";
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+                return;
+
+            }
+
+
+            /*
+             * GET FORM VALUES
+             */
+
+            const service =
+                document.getElementById(
+                    "service"
+                ).value;
+
+            const fullName =
+                document.getElementById(
+                    "fullName"
+                ).value.trim();
+
+            const email =
+                document.getElementById(
+                    "email"
+                ).value.trim();
+
+            const contactNumber =
+                document.getElementById(
+                    "contactNumber"
+                ).value.trim();
+
+            const barangay =
+                document.getElementById(
+                    "barangay"
+                ).value;
+
+            const purpose =
+                document.getElementById(
+                    "purpose"
+                ).value.trim();
+
+            const additionalInfo =
+                document.getElementById(
+                    "additionalInfo"
+                ).value.trim();
+
+
+            /*
+             * GET CURRENT DATE AND TIME
+             */
+
+            const now =
+                new Date();
+
+
+            const dateSubmitted =
+                now.toLocaleString(
+                    "en-PH",
+                    {
+                        dateStyle: "medium",
+                        timeStyle: "short"
+                    }
+                );
+
+
+            /*
+             * GENERATE REQUEST ID
+             */
+
+            const requestId =
+                "REQ-" +
+                now.getFullYear() +
+                String(
+                    now.getMonth() + 1
+                ).padStart(2, "0") +
+                String(
+                    now.getDate()
+                ).padStart(2, "0") +
+                "-" +
+                Math.floor(
+                    1000 +
+                    Math.random() * 9000
+                );
+
+
+            /*
+             * CREATE REQUEST OBJECT
+             */
+
+            const newRequest = {
+
+                requestId:
+                    requestId,
+
+                userId:
+                    currentUser.uid,
+
+                service:
+                    serviceNames[service],
+
+                fullName:
+                    fullName,
+
+                email:
+                    email,
+
+                contactNumber:
+                    contactNumber,
+
+                barangay:
+                    barangay,
+
+                purpose:
+                    purpose,
+
+                additionalInfo:
+                    additionalInfo,
+
+                dateSubmitted:
+                    dateSubmitted,
+
+                status:
+                    "Pending"
+
+            };
+
+
+            try {
+
+                /*
+                 * SAVE REQUEST TO FIRESTORE
+                 *
+                 * Collection name:
+                 * serviceRequests
+                 */
+
+                await addDoc(
+                    collection(
+                        db,
+                        "serviceRequests"
+                    ),
+                    newRequest
+                );
+
+
+                /*
+                 * SHOW SUCCESS MESSAGE
+                 */
+
+                requestForm.style.display =
+                    "none";
+
+                myRequestsLink.style.display =
+                    "none";
+
+
+                successRequestId.textContent =
+                    requestId;
+
+
+                successMessage.classList.add(
+                    "show"
+                );
+
+
+                /*
+                 * SCROLL TO TOP
+                 */
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            } catch (error) {
+
+                console.error(
+                    "Error saving request:",
+                    error
+                );
+
+
+                alert(
+                    "There was a problem submitting your request. Please try again."
+                );
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
+```
